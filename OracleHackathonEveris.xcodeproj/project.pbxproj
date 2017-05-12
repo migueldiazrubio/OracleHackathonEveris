@@ -12,6 +12,10 @@
 		279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4541EC5B7C800781CF4 /* Main.storyboard */; };
 		279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4571EC5B7C800781CF4 /* Assets.xcassets */; };
 		279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */; };
+		C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */; };
+		C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E91FF1EC5D75900266DE8 /* MapViewController.swift */; };
+		C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */; };
+		C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -33,6 +37,10 @@
 		279FE4571EC5B7C800781CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279FE45A1EC5B7C800781CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		279FE45C1EC5B7C800781CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoScreenViewController.swift; path = Source/InfoScreenViewController.swift; sourceTree = "<group>"; };
+		C20E91FF1EC5D75900266DE8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Source/MapViewController.swift; sourceTree = "<group>"; };
+		C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSelectViewController.swift; path = Source/TableSelectViewController.swift; sourceTree = "<group>"; };
+		C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Source/LoginViewController.swift; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +194,10 @@
 		279FE44F1EC5B7C800781CF4 /* OracleHackathonEveris */ = {
 			isa = PBXGroup;
 			children = (
+				C20E91FC1EC5D70E00266DE8 /* InfoScreen */,
+				C20E91FB1EC5D6F000266DE8 /* Map */,
+				C20E91FA1EC5D6E300266DE8 /* TableSelect */,
+				C20E91F81EC5D6CF00266DE8 /* Login */,
 				279FE4501EC5B7C800781CF4 /* AppDelegate.swift */,
 				279FE4521EC5B7C800781CF4 /* ViewController.swift */,
 				279FE4541EC5B7C800781CF4 /* Main.storyboard */,
@@ -194,6 +206,46 @@
 				279FE45C1EC5B7C800781CF4 /* Info.plist */,
 			);
 			path = OracleHackathonEveris;
+			sourceTree = "<group>";
+		};
+		C20E91F81EC5D6CF00266DE8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C20E91FA1EC5D6E300266DE8 /* TableSelect */ = {
+			isa = PBXGroup;
+			children = (
+				C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */,
+			);
+			name = TableSelect;
+			sourceTree = "<group>";
+		};
+		C20E91FB1EC5D6F000266DE8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C20E92011EC5D76500266DE8 /* Cells */,
+				C20E91FF1EC5D75900266DE8 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		C20E91FC1EC5D70E00266DE8 /* InfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */,
+			);
+			name = InfoScreen;
+			sourceTree = "<group>";
+		};
+		C20E92011EC5D76500266DE8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */ = {
@@ -505,8 +557,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */,
 				279FE4531EC5B7C800781CF4 /* ViewController.swift in Sources */,
+				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
 				279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */,
+				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
+				C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +728,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/oracle_mobile_ios_sdk/release-iphoneos",
 					"$(PROJECT_DIR)/oracle_mobile_ios_sdk/thirdParty/oamms_sdk_for_ios",
+					"$(SRCROOT)/oracle_mobile_ios_sdk/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -690,6 +747,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/oracle_mobile_ios_sdk/release-iphoneos",
 					"$(PROJECT_DIR)/oracle_mobile_ios_sdk/thirdParty/oamms_sdk_for_ios",
+					"$(SRCROOT)/oracle_mobile_ios_sdk/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
