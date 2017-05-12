@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FE4501EC5B7C800781CF4 /* AppDelegate.swift */; };
+		279FE4531EC5B7C800781CF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FE4521EC5B7C800781CF4 /* ViewController.swift */; };
+		279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4541EC5B7C800781CF4 /* Main.storyboard */; };
+		279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4571EC5B7C800781CF4 /* Assets.xcassets */; };
+		279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		279FE44D1EC5B7C800781CF4 /* OracleHackathonEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OracleHackathonEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279FE4501EC5B7C800781CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		279FE4521EC5B7C800781CF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		279FE4551EC5B7C800781CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		279FE4571EC5B7C800781CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279FE45A1EC5B7C800781CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		279FE45C1EC5B7C800781CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		279FE44A1EC5B7C800781CF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		279FE4441EC5B7C800781CF4 = {
+			isa = PBXGroup;
+			children = (
+				279FE44F1EC5B7C800781CF4 /* OracleHackathonEveris */,
+				279FE44E1EC5B7C800781CF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		279FE44E1EC5B7C800781CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				279FE44D1EC5B7C800781CF4 /* OracleHackathonEveris.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		279FE44F1EC5B7C800781CF4 /* OracleHackathonEveris */ = {
+			isa = PBXGroup;
+			children = (
+				279FE4501EC5B7C800781CF4 /* AppDelegate.swift */,
+				279FE4521EC5B7C800781CF4 /* ViewController.swift */,
+				279FE4541EC5B7C800781CF4 /* Main.storyboard */,
+				279FE4571EC5B7C800781CF4 /* Assets.xcassets */,
+				279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */,
+				279FE45C1EC5B7C800781CF4 /* Info.plist */,
+			);
+			path = OracleHackathonEveris;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		279FE44C1EC5B7C800781CF4 /* OracleHackathonEveris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279FE45F1EC5B7C800781CF4 /* Build configuration list for PBXNativeTarget "OracleHackathonEveris" */;
+			buildPhases = (
+				279FE4491EC5B7C800781CF4 /* Sources */,
+				279FE44A1EC5B7C800781CF4 /* Frameworks */,
+				279FE44B1EC5B7C800781CF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OracleHackathonEveris;
+			productName = OracleHackathonEveris;
+			productReference = 279FE44D1EC5B7C800781CF4 /* OracleHackathonEveris.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		279FE4451EC5B7C800781CF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = everis;
+				TargetAttributes = {
+					279FE44C1EC5B7C800781CF4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 279FE4481EC5B7C800781CF4 /* Build configuration list for PBXProject "OracleHackathonEveris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 279FE4441EC5B7C800781CF4;
+			productRefGroup = 279FE44E1EC5B7C800781CF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				279FE44C1EC5B7C800781CF4 /* OracleHackathonEveris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		279FE44B1EC5B7C800781CF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */,
+				279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */,
+				279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		279FE4491EC5B7C800781CF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279FE4531EC5B7C800781CF4 /* ViewController.swift in Sources */,
+				279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		279FE4541EC5B7C800781CF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				279FE4551EC5B7C800781CF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				279FE45A1EC5B7C800781CF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		279FE45D1EC5B7C800781CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		279FE45E1EC5B7C800781CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		279FE4601EC5B7C800781CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		279FE4611EC5B7C800781CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		279FE4481EC5B7C800781CF4 /* Build configuration list for PBXProject "OracleHackathonEveris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279FE45D1EC5B7C800781CF4 /* Debug */,
+				279FE45E1EC5B7C800781CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279FE45F1EC5B7C800781CF4 /* Build configuration list for PBXNativeTarget "OracleHackathonEveris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279FE4601EC5B7C800781CF4 /* Debug */,
+				279FE4611EC5B7C800781CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 279FE4451EC5B7C800781CF4 /* Project object */;
+}
