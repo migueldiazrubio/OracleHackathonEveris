@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         // TEst
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(<#T##animated: Bool##Bool#>)
+    }
 
 
 }
