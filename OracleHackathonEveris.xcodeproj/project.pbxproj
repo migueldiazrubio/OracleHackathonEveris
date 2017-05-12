@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					279FE44C1EC5B7C800781CF4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CKJPC95UYE;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKJPC95UYE;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKJPC95UYE;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
@@ -299,6 +302,7 @@
 				279FE4611EC5B7C800781CF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
