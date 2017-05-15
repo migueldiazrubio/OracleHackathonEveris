@@ -35,11 +35,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-Eu-iNe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-Eu-iNe">
                                 <rect key="frame" x="16" y="467" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.86666666670000003" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eeX-VY-CiG"/>
+                                </constraints>
+                                <state key="normal" title="Entrar"/>
                                 <connections>
+                                    <action selector="buttonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph0-9i-KwJ"/>
                                     <segue destination="5W8-By-3NZ" kind="show" id="DDS-bp-T3h"/>
                                 </connections>
                             </button>
@@ -52,8 +56,18 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CH3-Eu-iNe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="158.5" id="094-y3-ciu"/>
+                            <constraint firstAttribute="trailing" secondItem="CH3-Eu-iNe" secondAttribute="trailing" constant="16" id="DU5-4a-VpZ"/>
+                            <constraint firstItem="CH3-Eu-iNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Haq-HE-ZYx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YOP-xl-dUP"/>
+                    <connections>
+                        <outlet property="buttonLogin" destination="CH3-Eu-iNe" id="Cuw-ma-EvX"/>
+                        <outlet property="passTextfield" destination="2Gb-b2-ALD" id="4Bx-XL-hoJ"/>
+                        <outlet property="userTextField" destination="Rlp-3g-TgZ" id="ByZ-V4-QvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

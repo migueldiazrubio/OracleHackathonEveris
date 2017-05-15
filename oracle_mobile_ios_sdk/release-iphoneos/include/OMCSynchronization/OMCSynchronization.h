@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OMCCore/OMCServiceProxy.h"
+#import "OMCCore.h"
+#import "OMCServiceProxy.h"
 #import "OMCSyncPolicy.h"
 #import "OMCSyncGlobals.h"
 #import "OMCMobileEndpoint.h"
