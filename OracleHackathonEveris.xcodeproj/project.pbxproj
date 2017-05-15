@@ -41,6 +41,7 @@
 		C20E91FF1EC5D75900266DE8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Source/MapViewController.swift; sourceTree = "<group>"; };
 		C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSelectViewController.swift; path = Source/TableSelectViewController.swift; sourceTree = "<group>"; };
 		C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Source/LoginViewController.swift; sourceTree = "<group>"; };
+		C20E92061ECA301B00266DE8 /* OracleHackathonEveris-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OracleHackathonEveris-Bridging-Header.h"; path = "Source/OracleHackathonEveris-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 				279FE4571EC5B7C800781CF4 /* Assets.xcassets */,
 				279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */,
 				279FE45C1EC5B7C800781CF4 /* Info.plist */,
+				C20E92061ECA301B00266DE8 /* OracleHackathonEveris-Bridging-Header.h */,
 			);
 			path = OracleHackathonEveris;
 			sourceTree = "<group>";
@@ -732,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/palavado/OracleHackathonEveris/OracleHackathonEveris/Source/OracleHackathonEveris-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -751,6 +754,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/palavado/OracleHackathonEveris/OracleHackathonEveris/Source/OracleHackathonEveris-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
