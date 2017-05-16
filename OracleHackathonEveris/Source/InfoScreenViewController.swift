@@ -9,10 +9,14 @@
 import UIKit
 
 class InfoScreenViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet weak var gifImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let gif = UIImage(gifName: "Gif")
+        gifImage.setGifImage(gif)
+        self.title = "Resumen"
         // Do any additional setup after loading the view.
     }
 

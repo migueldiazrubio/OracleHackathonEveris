@@ -34,6 +34,12 @@
 		C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */; };
 		C20E92251ECB19D900266DE8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */; };
 		C20E92261ECB19D900266DE8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */; };
+		C20E92281ECB2C9400266DE8 /* TableViewHeaderCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92271ECB2C9400266DE8 /* TableViewHeaderCustom.swift */; };
+		C20E922A1ECB2CA900266DE8 /* TableViewHeaderCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20E92291ECB2CA900266DE8 /* TableViewHeaderCustom.xib */; };
+		C20E922D1ECB442100266DE8 /* Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = C20E922C1ECB442100266DE8 /* Gif.gif */; };
+		C20E92321ECB46FB00266DE8 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E922F1ECB46FB00266DE8 /* SwiftyGifManager.swift */; };
+		C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */; };
+		C20E92341ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -91,6 +97,13 @@
 		C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLLocateOfficesViewController.m; sourceTree = "<group>"; };
 		C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = Source/CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Source/CustomTableViewCell.xib; sourceTree = "<group>"; };
+		C20E92271ECB2C9400266DE8 /* TableViewHeaderCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHeaderCustom.swift; path = Source/TableViewHeaderCustom.swift; sourceTree = "<group>"; };
+		C20E92291ECB2CA900266DE8 /* TableViewHeaderCustom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewHeaderCustom.xib; path = Source/TableViewHeaderCustom.xib; sourceTree = "<group>"; };
+		C20E922C1ECB442100266DE8 /* Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Gif.gif; sourceTree = "<group>"; };
+		C20E922E1ECB46FB00266DE8 /* SwiftyGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyGif.h; path = Source/SwiftyGif.h; sourceTree = "<group>"; };
+		C20E922F1ECB46FB00266DE8 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = Source/SwiftyGifManager.swift; sourceTree = "<group>"; };
+		C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "Source/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "Source/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +259,7 @@
 		279FE44F1EC5B7C800781CF4 /* OracleHackathonEveris */ = {
 			isa = PBXGroup;
 			children = (
+				C20E922B1ECB441100266DE8 /* Gif */,
 				C20E921B1ECB002C00266DE8 /* Objective-C */,
 				C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */,
 				C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */,
@@ -348,6 +362,8 @@
 			children = (
 				C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */,
 				C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */,
+				C20E92271ECB2C9400266DE8 /* TableViewHeaderCustom.swift */,
+				C20E92291ECB2CA900266DE8 /* TableViewHeaderCustom.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -381,6 +397,18 @@
 			);
 			name = "Color+Hex";
 			path = "Source/Objective-C/Color+Hex";
+			sourceTree = "<group>";
+		};
+		C20E922B1ECB441100266DE8 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				C20E922E1ECB46FB00266DE8 /* SwiftyGif.h */,
+				C20E922F1ECB46FB00266DE8 /* SwiftyGifManager.swift */,
+				C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */,
+				C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */,
+				C20E922C1ECB442100266DE8 /* Gif.gif */,
+			);
+			name = Gif;
 			sourceTree = "<group>";
 		};
 		C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */ = {
@@ -692,8 +720,10 @@
 				279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */,
 				C20E92261ECB19D900266DE8 /* CustomTableViewCell.xib in Resources */,
 				C2F2B2941EC5CC2100ACE7CB /* OMLocalizable.strings in Resources */,
+				C20E922A1ECB2CA900266DE8 /* TableViewHeaderCustom.xib in Resources */,
 				C2F2B2901EC5CC2100ACE7CB /* SyncStore.mom in Resources */,
 				279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */,
+				C20E922D1ECB442100266DE8 /* Gif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,9 +744,11 @@
 				C20E92091ECA32EB00266DE8 /* MCSSyncManager.swift in Sources */,
 				B1656B9D1ECB038F00C774C2 /* LatLngPoint.m in Sources */,
 				C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */,
+				C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */,
 				B1656B991ECB038F00C774C2 /* NEOLMockRequestManager.m in Sources */,
 				B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */,
 				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
+				C20E92341ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift in Sources */,
 				B1656BA51ECB0F7100C774C2 /* UserInfo.m in Sources */,
 				B1656B9A1ECB038F00C774C2 /* MKMapView+ZoomLevel.m in Sources */,
 				279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */,
@@ -725,6 +757,8 @@
 				C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */,
 				B1656BA11ECB049100C774C2 /* UIColor+HexColor.m in Sources */,
 				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
+				C20E92281ECB2C9400266DE8 /* TableViewHeaderCustom.swift in Sources */,
+				C20E92321ECB46FB00266DE8 /* SwiftyGifManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

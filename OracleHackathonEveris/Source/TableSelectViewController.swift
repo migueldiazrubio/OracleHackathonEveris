@@ -8,19 +8,34 @@
 
 import UIKit
 
-class TableSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     @IBOutlet weak var selectedButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var officeDirecctions : [NEOLOffice] = []
     var officeList : [NEOLOffice] = []
     
+    fileprivate var headerView : TableViewHeaderCustom!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.title = "Encargos"
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
+        tableView.register(UINib(nibName :"TableViewHeaderCustom", bundle: nil), forCellReuseIdentifier: "TableViewHeaderCustom")
+    
         officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [NEOLOffice]
+        self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        headerView = TableViewHeaderCustom.instanceFromNib()
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 101))
+        self.tableView.tableHeaderView?.addSubview(headerView)
+        self.tableView.setNeedsLayout()
+        self.tableView.layoutIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,9 +68,29 @@ class TableSelectViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
     }
-    @IBAction func selectedButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "showMapSegue", sender: self)
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CustomTableViewCell
+        if cell.checkImage.isHidden == true {
+            cell.checkImage.isHidden = false
+            officeDirecctions.append(officeList[indexPath.row])
+        }else{
+            cell.checkImage.isHidden = true
+            if officeDirecctions.contains(officeList[indexPath.row]){
+                officeDirecctions.remove(at: officeDirecctions.index(of: officeList[indexPath.row])!)
+            }
+        }
     }
+    
+    @IBAction func selectedButtonPressed(_ sender: Any) {
+        if officeDirecctions.count > 0 {
+            self.performSegue(withIdentifier: "showMapSegue", sender: self)
+        }else{
+            let alerts = UIAlertView(title: "Error", message: "Debes seleccionar alguna dirección", delegate: self, cancelButtonTitle: "Aceptar")
+            alerts.show()
+        }
+    }
+
 
     /*
     // MARK: - Navigation

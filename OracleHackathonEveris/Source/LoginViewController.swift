@@ -28,8 +28,6 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
         
         passTextfield.initTextfield(withPlaceholder: "Password", iconActive: nil, iconEmpty: nil, textColor: "ffffff", with:UIFont(name: "Arial", size:16), lineColor: UIColor.white, withLineBack: UIColor.white, errorColor: UIColor.red, upPlaceHolder: true, withImage: false, andError: true, andIsLineUp: true, phColor: "ffffff", andFontForPhUp: UIFont(name: "Arial", size:13))
         
-        buttonLogin.layer.borderColor = UIColor.white.cgColor
-        
         // Do any additional setup after loading the view.
     }
 

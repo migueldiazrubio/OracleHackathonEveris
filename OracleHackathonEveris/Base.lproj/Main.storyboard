@@ -44,14 +44,6 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.BorderColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.BorderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph0-9i-KwJ"/>
                                     <segue destination="5W8-By-3NZ" kind="show" identifier="segueToTable" id="DDS-bp-T3h"/>
@@ -139,8 +131,11 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-mN-oHl">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <state key="normal" title="Seleccionar"/>
+                                <rect key="frame" x="16" y="610" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Seleccionar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="selectedButtonPressed:" destination="5W8-By-3NZ" eventType="touchUpInside" id="LvP-7W-bdB"/>
                                 </connections>
@@ -149,8 +144,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wLV-mN-oHl" secondAttribute="trailing" constant="16" id="155-dI-hBK"/>
-                            <constraint firstItem="wLV-mN-oHl" firstAttribute="top" secondItem="RKi-Oh-Qg2" secondAttribute="bottom" constant="13" id="6dc-bU-tRH"/>
-                            <constraint firstItem="URj-Gd-BeL" firstAttribute="top" secondItem="wLV-mN-oHl" secondAttribute="bottom" constant="20" id="9Pf-ba-4S0"/>
+                            <constraint firstItem="wLV-mN-oHl" firstAttribute="top" secondItem="RKi-Oh-Qg2" secondAttribute="bottom" constant="6" id="6dc-bU-tRH"/>
+                            <constraint firstItem="URj-Gd-BeL" firstAttribute="top" secondItem="wLV-mN-oHl" secondAttribute="bottom" constant="7" id="9Pf-ba-4S0"/>
                             <constraint firstAttribute="trailing" secondItem="RKi-Oh-Qg2" secondAttribute="trailing" id="AAE-gz-7K4"/>
                             <constraint firstItem="RKi-Oh-Qg2" firstAttribute="leading" secondItem="6qU-7h-O8n" secondAttribute="leading" id="Wex-WE-hir"/>
                             <constraint firstItem="RKi-Oh-Qg2" firstAttribute="top" secondItem="6qU-7h-O8n" secondAttribute="top" id="dCj-Ps-Wbc"/>
@@ -214,32 +209,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-Tk-FXB">
-                                <rect key="frame" x="16" y="77" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhorabuena has terminado la ruta seleccionada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-Tk-FXB">
+                                <rect key="frame" x="16" y="88" width="343" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-61-pD9">
-                                <rect key="frame" x="16" y="375" width="343" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-b4-2sh">
-                                <rect key="frame" x="16" y="142" width="343" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gif.gif" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-b4-2sh">
+                                <rect key="frame" x="16" y="170" width="343" height="232"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-5x-GDF">
-                                <rect key="frame" x="16" y="582" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-5x-GDF">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WfF-nZ-RBd"/>
+                                </constraints>
+                                <state key="normal" title="Terminar Ruta ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CA0-Tk-FXB" secondAttribute="trailing" constant="16" id="Dio-VD-qQO"/>
+                            <constraint firstItem="l1F-5x-GDF" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="16" id="HeO-j1-knz"/>
+                            <constraint firstItem="eN1-Lm-7hV" firstAttribute="top" secondItem="l1F-5x-GDF" secondAttribute="bottom" constant="20" id="aEr-Dx-RgL"/>
+                            <constraint firstItem="CA0-Tk-FXB" firstAttribute="top" secondItem="gjH-7r-4FP" secondAttribute="bottom" constant="24" id="dnc-oo-hOJ"/>
+                            <constraint firstAttribute="trailing" secondItem="l1F-5x-GDF" secondAttribute="trailing" constant="16" id="rS9-a2-KMw"/>
+                            <constraint firstAttribute="trailing" secondItem="ExH-b4-2sh" secondAttribute="trailing" constant="16" id="wo1-Xe-r9n"/>
+                            <constraint firstItem="ExH-b4-2sh" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="16" id="yTF-5i-BGT"/>
+                            <constraint firstItem="CA0-Tk-FXB" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="16" id="zDf-Me-Bln"/>
+                            <constraint firstItem="ExH-b4-2sh" firstAttribute="top" secondItem="CA0-Tk-FXB" secondAttribute="bottom" constant="29" id="zFz-OP-0rf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gifImage" destination="ExH-b4-2sh" id="RBN-yZ-jQR"/>
+                        <outlet property="titleLabel" destination="CA0-Tk-FXB" id="82j-i5-Jgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRQ-17-FOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,6 +328,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonHowToArriveTouchUpInside:" destination="L3x-W9-uqv" eventType="touchUpInside" id="Pma-IR-3PA"/>
+                                                    <segue destination="Fby-9D-SVa" kind="show" id="gKP-9b-OJq"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -405,9 +412,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gif.gif" width="324" height="232"/>
         <image name="microsoft-cloud-based-hackathon-yan-" width="795" height="250"/>
         <image name="offices_bg_detail" width="16" height="16"/>
         <image name="offices_btn_gps" width="16" height="16"/>
         <image name="offices_ico_map" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cyk-Os-egu"/>
+    </inferredMetricsTieBreakers>
 </document>
