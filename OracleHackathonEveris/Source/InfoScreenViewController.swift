@@ -11,6 +11,7 @@ import UIKit
 class InfoScreenViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet weak var buttonEnded: UIButton!
     @IBOutlet weak var gifImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class InfoScreenViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func buttonEndedPresse(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
 
     /*
