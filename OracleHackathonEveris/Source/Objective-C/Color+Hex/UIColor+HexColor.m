@@ -1,8 +1,8 @@
 //
 //  UIColor+HexColor.m
-//  BBVAZenit
+//  NEOL
 //
-//  Created by Alexis Santos Pérez on 27/08/12.
+//  Created by ameu8 on 27/08/12.
 //  Copyright (c) 2012 Ameu8. All rights reserved.
 //
 
@@ -60,66 +60,6 @@
                            green:((float) g / 255.0f)  
                             blue:((float) b / 255.0f)  
                            alpha:alpha];
-}
-
-
-/**
- * GAMA COLORES POPULAR
-**/
-
-+(UIColor *) popularDarkBlue{
-    
-    return [UIColor colorWithHexString:@"002668"];
-    
-}
-
-+(UIColor *) popularTurquoise
-
-{
-    return [UIColor colorWithHexString:@"47BBB8"];
-
-    
-}
-
-+(UIColor *) popularGrey
-
-{
-    return [UIColor colorWithHexString:@"616161"];
-    
-    
-}
-
-+(UIColor *) popularLightGrey
-
-{
-    return [UIColor colorWithHexString:@"F9F9F9"];
-
-
-}
-
-+(UIColor *) popularSelectedGrey
-
-{
-    return [UIColor colorWithHexString:@"ECECEC"];
-
-    
-}
-
-+(UIColor *) popularGreyDark
-
-{
-    return [UIColor colorWithHexString:@"333333"];
-    
-    
-}
-
-
-+(UIColor *) popularRed
-
-{
-    return [UIColor colorWithHexString:@"FF4F4E"];
-    
-    
 }
 
 @end
