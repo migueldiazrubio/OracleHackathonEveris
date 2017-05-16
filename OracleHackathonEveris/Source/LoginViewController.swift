@@ -8,17 +8,28 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDelegate {
 
-    @IBOutlet weak var passTextfield: UITextField!
-    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passTextfield: JJMaterialTextfield!
+    @IBOutlet weak var userTextField: JJMaterialTextfield!
     @IBOutlet weak var buttonLogin: UIButton!
     
     var mask:UIView?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passTextfield.delegateJJ = self
+        passTextfield.delegate = self
+        
+        userTextField.delegateJJ = self
+        userTextField.delegate = self
+        
+        userTextField.initTextfield(withPlaceholder: "Username", iconActive: nil, iconEmpty: nil, textColor: "ffffff", with:UIFont(name: "Arial", size:16), lineColor: UIColor.white, withLineBack: UIColor.white, errorColor: UIColor.red, upPlaceHolder: true, withImage: false, andError: true, andIsLineUp: true, phColor: "ffffff", andFontForPhUp: UIFont(name: "Arial", size:13))
+        
+        passTextfield.initTextfield(withPlaceholder: "Password", iconActive: nil, iconEmpty: nil, textColor: "ffffff", with:UIFont(name: "Arial", size:16), lineColor: UIColor.white, withLineBack: UIColor.white, errorColor: UIColor.red, upPlaceHolder: true, withImage: false, andError: true, andIsLineUp: true, phColor: "ffffff", andFontForPhUp: UIFont(name: "Arial", size:13))
+        
+        buttonLogin.layer.borderColor = UIColor.white.cgColor
+        
         // Do any additional setup after loading the view.
     }
 
@@ -37,8 +48,9 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
  */
-     @IBAction func buttonLoginPressed(_ sender: Any) {
-         authenticate(anonymously: false);
+     @IBAction private func buttonLoginPressed(_ sender: Any) {
+         ///authenticate(anonymously: false);
+        //self.performSegue(withIdentifier: "segueToTable", sender: self)
      }
     
     override func viewWillAppear(_ animated: Bool) {

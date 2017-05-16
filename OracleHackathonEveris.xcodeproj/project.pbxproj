@@ -12,7 +12,6 @@
 		279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4541EC5B7C800781CF4 /* Main.storyboard */; };
 		279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4571EC5B7C800781CF4 /* Assets.xcassets */; };
 		279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */; };
-		B1656B951ECB038F00C774C2 /* NEOLLocateOfficesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B811ECB038F00C774C2 /* NEOLLocateOfficesViewController.m */; };
 		B1656B961ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */; };
 		B1656B971ECB038F00C774C2 /* NEOLAnnotationOfficeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */; };
 		B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B851ECB038F00C774C2 /* NEOLAddress.m */; };
@@ -33,6 +32,7 @@
 		C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */; };
 		C20E92161ECAE84100266DE8 /* OMC.plist in Resources */ = {isa = PBXBuildFile; fileRef = C20E92151ECAE84100266DE8 /* OMC.plist */; };
 		C20E921A1ECB001C00266DE8 /* JJMaterialTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */; };
+		C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -54,8 +54,6 @@
 		279FE4571EC5B7C800781CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279FE45A1EC5B7C800781CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		279FE45C1EC5B7C800781CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1656B811ECB038F00C774C2 /* NEOLLocateOfficesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLLocateOfficesViewController.m; sourceTree = "<group>"; };
-		B1656B821ECB038F00C774C2 /* NEOLLocateOfficesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOLLocateOfficesViewController.h; sourceTree = "<group>"; };
 		B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLLocateOfficesIPhoneViewController.m; sourceTree = "<group>"; };
 		B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLAnnotationOfficeView.m; sourceTree = "<group>"; };
 		B1656B851ECB038F00C774C2 /* NEOLAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLAddress.m; sourceTree = "<group>"; };
@@ -89,6 +87,8 @@
 		C20E92151ECAE84100266DE8 /* OMC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OMC.plist; sourceTree = "<group>"; };
 		C20E92181ECB001C00266DE8 /* JJMaterialTextfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMaterialTextfield.h; sourceTree = "<group>"; };
 		C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMaterialTextfield.m; sourceTree = "<group>"; };
+		C20E92201ECB073A00266DE8 /* NEOLLocateOfficesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOLLocateOfficesViewController.h; sourceTree = "<group>"; };
+		C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLLocateOfficesViewController.m; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 		B1656B801ECB023F00C774C2 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				B1656B811ECB038F00C774C2 /* NEOLLocateOfficesViewController.m */,
-				B1656B821ECB038F00C774C2 /* NEOLLocateOfficesViewController.h */,
+				C20E92201ECB073A00266DE8 /* NEOLLocateOfficesViewController.h */,
+				C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */,
 				B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */,
 				B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */,
 				B1656B851ECB038F00C774C2 /* NEOLAddress.m */,
@@ -706,7 +706,6 @@
 				C20E92091ECA32EB00266DE8 /* MCSSyncManager.swift in Sources */,
 				B1656B9D1ECB038F00C774C2 /* LatLngPoint.m in Sources */,
 				C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */,
-				B1656B951ECB038F00C774C2 /* NEOLLocateOfficesViewController.m in Sources */,
 				B1656B991ECB038F00C774C2 /* NEOLMockRequestManager.m in Sources */,
 				B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */,
 				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
@@ -715,6 +714,7 @@
 				279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */,
 				C20E921A1ECB001C00266DE8 /* JJMaterialTextfield.m in Sources */,
 				B1656B961ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m in Sources */,
+				C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */,
 				B1656BA11ECB049100C774C2 /* UIColor+HexColor.m in Sources */,
 				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
 				C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */,
