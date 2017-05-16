@@ -25,7 +25,6 @@
 		B1656BA51ECB0F7100C774C2 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656BA41ECB0F7100C774C2 /* UserInfo.m */; };
 		B1656BA81ECB116B00C774C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1656BA71ECB116B00C774C2 /* MapKit.framework */; };
 		C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */; };
-		C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E91FF1EC5D75900266DE8 /* MapViewController.swift */; };
 		C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */; };
 		C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */; };
 		C20E92091ECA32EB00266DE8 /* MCSSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */; };
@@ -78,7 +77,6 @@
 		B1656BA41ECB0F7100C774C2 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		B1656BA71ECB116B00C774C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoScreenViewController.swift; path = Source/InfoScreenViewController.swift; sourceTree = "<group>"; };
-		C20E91FF1EC5D75900266DE8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Source/MapViewController.swift; sourceTree = "<group>"; };
 		C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSelectViewController.swift; path = Source/TableSelectViewController.swift; sourceTree = "<group>"; };
 		C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Source/LoginViewController.swift; sourceTree = "<group>"; };
 		C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSSyncManager.swift; path = Source/MCSSyncManager.swift; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				C20E92011EC5D76500266DE8 /* Cells */,
-				C20E91FF1EC5D75900266DE8 /* MapViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -621,6 +618,9 @@
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -717,7 +717,6 @@
 				C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */,
 				B1656BA11ECB049100C774C2 /* UIColor+HexColor.m in Sources */,
 				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
-				C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,7 +878,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3WSJD6HPTZ;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -902,7 +901,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3WSJD6HPTZ;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -48,12 +48,19 @@
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
+    
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
     }
     [self.locationManager startUpdatingLocation];
     
     if (![CLLocationManager locationServicesEnabled]) {
+        
+        
+        
         [self initializeMapViewCenteringInCoordinate:kMadridCenter];
     }
     
@@ -371,5 +378,17 @@
     
     return nil;
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        NSString *longitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+        NSString *latitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+    }
+}
+
 
 @end
