@@ -59,5 +59,4 @@
 - (void)openGoogleMapsAndShowHowToArrive;
 - (void)openMapsAndShowHowToArrive;
 
-- (void)searchForString:(NSString *)string;
 @end

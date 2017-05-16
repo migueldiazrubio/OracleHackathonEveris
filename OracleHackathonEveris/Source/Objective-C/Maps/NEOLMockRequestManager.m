@@ -8,13 +8,21 @@
 
 #import "NEOLMockRequestManager.h"
 #import "NEOLOffice.h"
+#import "UserInfo.h"
 
 #define kPOITypeOffice  @"OFICINA"
 #define kPOITypeGarage  @"PDS"
 
 @implementation NEOLMockRequestManager
 
-
++ (UserInfo*)mockUserInfoRequest{
+     UserInfo *userInfo = [[UserInfo alloc] init];
+    userInfo.userId = @"1";
+    userInfo.name = @"Usuario 1";
+    userInfo.pass = @"";
+    
+    return userInfo;
+}
 
 + (NSArray *)mockLocateOfficesRequest {
     NEOLAddress *address1 = [[NEOLAddress alloc] init];

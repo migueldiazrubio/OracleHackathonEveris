@@ -14,12 +14,6 @@
 @interface NEOLMockRequestManager : NSObject
 
 + (NEOLUser *)mockUserInfoRequest;
-+ (NSArray *)mockBannersRequest;
-+ (NSArray *)mockContractsWithLastInvoicesRequest;
-+ (NSArray *)mockContractsRequest;
-+ (NSArray *)mockContactPhonesRequest;
 + (NSArray *)mockLocateOfficesRequest;
-+ (NSArray *)mockBankAccountsRequest;
-+ (NSArray *)mockSupplyPointsRequest;
 
 @end
