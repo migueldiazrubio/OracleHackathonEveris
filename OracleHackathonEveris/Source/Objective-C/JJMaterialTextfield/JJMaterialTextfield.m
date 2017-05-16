@@ -99,7 +99,7 @@
     //Create subLine
     self.line = [[UIView alloc] init];
     //Initial colour
-    self.line.backgroundColor = [UIColor colorWithHexString:colourOff];
+    self.line.backgroundColor = [UIColor colorWithHexString:@"ffffff"];
     
     //Create left icon
     if(isImage){
