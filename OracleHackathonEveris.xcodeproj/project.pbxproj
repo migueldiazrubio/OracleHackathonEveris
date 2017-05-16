@@ -33,6 +33,8 @@
 		C20E92161ECAE84100266DE8 /* OMC.plist in Resources */ = {isa = PBXBuildFile; fileRef = C20E92151ECAE84100266DE8 /* OMC.plist */; };
 		C20E921A1ECB001C00266DE8 /* JJMaterialTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */; };
 		C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */; };
+		C20E92251ECB19D900266DE8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */; };
+		C20E92261ECB19D900266DE8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -89,6 +91,8 @@
 		C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMaterialTextfield.m; sourceTree = "<group>"; };
 		C20E92201ECB073A00266DE8 /* NEOLLocateOfficesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEOLLocateOfficesViewController.h; sourceTree = "<group>"; };
 		C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEOLLocateOfficesViewController.m; sourceTree = "<group>"; };
+		C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = Source/CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Source/CustomTableViewCell.xib; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 		C20E92011EC5D76500266DE8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C20E92231ECB19D900266DE8 /* CustomTableViewCell.swift */,
+				C20E92241ECB19D900266DE8 /* CustomTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -684,6 +690,7 @@
 				C20E92161ECAE84100266DE8 /* OMC.plist in Resources */,
 				C2F2B2921EC5CC2100ACE7CB /* INFO.txt in Resources */,
 				279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */,
+				C20E92261ECB19D900266DE8 /* CustomTableViewCell.xib in Resources */,
 				C2F2B2941EC5CC2100ACE7CB /* OMLocalizable.strings in Resources */,
 				C2F2B2901EC5CC2100ACE7CB /* SyncStore.mom in Resources */,
 				279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */,
@@ -699,6 +706,7 @@
 			files = (
 				B1656B9E1ECB038F00C774C2 /* NEOLAnnotationOfficeModel.m in Sources */,
 				C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */,
+				C20E92251ECB19D900266DE8 /* CustomTableViewCell.swift in Sources */,
 				B1656B9C1ECB038F00C774C2 /* GGeocodeResponse.m in Sources */,
 				B1656B9B1ECB038F00C774C2 /* NEOLOffice.m in Sources */,
 				B1656B971ECB038F00C774C2 /* NEOLAnnotationOfficeView.m in Sources */,
