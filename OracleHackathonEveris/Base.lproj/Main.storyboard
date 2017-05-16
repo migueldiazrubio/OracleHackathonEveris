@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -149,6 +149,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="RKi-Oh-Qg2" id="7VK-Nl-PVM"/>
+                        <segue destination="L3x-W9-uqv" kind="show" id="3db-Bk-Pls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5as-t8-V2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,9 +181,6 @@
                                 <rect key="frame" x="262" y="577" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Fby-9D-SVa" kind="show" id="JgQ-mX-xyw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3o-vf-vWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="136"/>
+            <point key="canvasLocation" x="2535" y="940"/>
         </scene>
         <!--Info Screen View Controller-->
         <scene sceneID="Ggq-ck-osU">
@@ -255,8 +253,149 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--NEOLLocateOfficesIPhoneViewController-->
+        <scene sceneID="uuY-dZ-ZcX">
+            <objects>
+                <viewController storyboardIdentifier="LocateOfficesViewController" automaticallyAdjustsScrollViewInsets="NO" id="L3x-W9-uqv" userLabel="NEOLLocateOfficesIPhoneViewController" customClass="NEOLLocateOfficesIPhoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mNx-8k-xKn"/>
+                        <viewControllerLayoutGuide type="bottom" id="1rZ-YV-YlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SIF-hR-yDb">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-Wl-tHW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="548"/>
+                                <connections>
+                                    <outlet property="delegate" destination="L3x-W9-uqv" id="IkW-wM-YOq"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-eN-fb9" userLabel="viewOfficeInfo">
+                                <rect key="frame" x="0.0" y="519" width="375" height="83"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offices_bg_detail" translatesAutoresizingMaskIntoConstraints="NO" id="EbX-eI-l39" userLabel="imageViewBackground">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7g-2u-UYr" userLabel="viewOfficeContent">
+                                        <rect key="frame" x="0.0" y="2" width="375" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Office Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="LZP-bt-AGR" userLabel="labelOfficeTitle">
+                                                <rect key="frame" x="18" y="15" width="274" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.25493267180000001" green="0.25488474970000002" blue="0.25493544340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Office Address in two lines of text" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" preferredMaxLayoutWidth="150" translatesAutoresizingMaskIntoConstraints="NO" id="hbK-4l-DKD" userLabel="labelOfficeAddress">
+                                                <rect key="frame" x="18" y="39" width="274" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.56084537509999999" green="0.56075018639999996" blue="0.56085085869999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIr-72-sNn" userLabel="viewSeparator">
+                                                <rect key="frame" x="307" y="19" width="1" height="45"/>
+                                                <color key="backgroundColor" red="0.22148126360000001" green="0.55402666330000006" blue="0.79830700160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="TXN-We-1S6"/>
+                                                    <constraint firstAttribute="width" constant="1" id="hOs-cY-7fE"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-v1-53N" userLabel="buttonHowToArrive">
+                                                <rect key="frame" x="322" y="23" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="IAy-p8-Pp4"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="offices_ico_map">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonHowToArriveTouchUpInside:" destination="L3x-W9-uqv" eventType="touchUpInside" id="Pma-IR-3PA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JIb-v1-53N" secondAttribute="trailing" constant="16" id="0yH-BL-I1C"/>
+                                            <constraint firstItem="hbK-4l-DKD" firstAttribute="top" secondItem="LZP-bt-AGR" secondAttribute="bottom" constant="6" id="C6A-pc-aE2"/>
+                                            <constraint firstItem="JIb-v1-53N" firstAttribute="top" secondItem="v7g-2u-UYr" secondAttribute="top" constant="23" id="IBH-IU-tB8"/>
+                                            <constraint firstItem="LZP-bt-AGR" firstAttribute="top" secondItem="v7g-2u-UYr" secondAttribute="top" constant="15" id="THM-Rh-fdG"/>
+                                            <constraint firstAttribute="centerY" secondItem="JIb-v1-53N" secondAttribute="centerY" constant="0.5" id="WfT-oZ-Bhc"/>
+                                            <constraint firstItem="LZP-bt-AGR" firstAttribute="leading" secondItem="v7g-2u-UYr" secondAttribute="leading" constant="18" id="aZv-b8-RJi"/>
+                                            <constraint firstAttribute="centerY" secondItem="xIr-72-sNn" secondAttribute="centerY" constant="-0.5" id="drc-s9-OhO"/>
+                                            <constraint firstItem="xIr-72-sNn" firstAttribute="leading" secondItem="LZP-bt-AGR" secondAttribute="trailing" constant="15" id="oH4-gw-KiK"/>
+                                            <constraint firstItem="hbK-4l-DKD" firstAttribute="leading" secondItem="LZP-bt-AGR" secondAttribute="leading" id="oPr-4C-MNu"/>
+                                            <constraint firstItem="JIb-v1-53N" firstAttribute="leading" secondItem="xIr-72-sNn" secondAttribute="trailing" constant="14" id="pcg-48-e6J"/>
+                                            <constraint firstItem="xIr-72-sNn" firstAttribute="leading" secondItem="hbK-4l-DKD" secondAttribute="trailing" constant="15" id="ziO-7g-q4n"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EbX-eI-l39" firstAttribute="top" secondItem="Jjb-eN-fb9" secondAttribute="top" id="BFf-JM-PsM"/>
+                                    <constraint firstItem="v7g-2u-UYr" firstAttribute="leading" secondItem="Jjb-eN-fb9" secondAttribute="leading" id="OAA-L3-c6d"/>
+                                    <constraint firstAttribute="trailing" secondItem="EbX-eI-l39" secondAttribute="trailing" id="S1G-jd-qDT"/>
+                                    <constraint firstItem="EbX-eI-l39" firstAttribute="leading" secondItem="Jjb-eN-fb9" secondAttribute="leading" id="gAk-WG-UiJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="EbX-eI-l39" secondAttribute="bottom" id="iyA-AO-hVc"/>
+                                    <constraint firstAttribute="height" constant="83" id="lU3-Fw-dVy"/>
+                                    <constraint firstAttribute="trailing" secondItem="v7g-2u-UYr" secondAttribute="trailing" id="txJ-KZ-BJz"/>
+                                    <constraint firstItem="v7g-2u-UYr" firstAttribute="top" secondItem="Jjb-eN-fb9" secondAttribute="top" constant="2" id="uK6-ZN-TYl"/>
+                                    <constraint firstAttribute="bottom" secondItem="v7g-2u-UYr" secondAttribute="bottom" constant="-2" id="vW3-jA-NUA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR5-jS-aTF">
+                                <rect key="frame" x="313" y="457" width="42" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.21602996429999999" blue="0.82407668769999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="GGz-ea-Ofs"/>
+                                    <constraint firstAttribute="height" constant="42" id="dTQ-Nx-Uql"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="offices_btn_gps">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonCenterTouchUpInside:" destination="L3x-W9-uqv" eventType="touchUpInside" id="oo0-1d-Mqp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.55138766770000003" blue="0.79365450140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jjb-eN-fb9" firstAttribute="leading" secondItem="SIF-hR-yDb" secondAttribute="leading" id="AkJ-I2-hp2"/>
+                            <constraint firstAttribute="trailing" secondItem="EYO-Wl-tHW" secondAttribute="trailing" id="HqL-xR-NLp"/>
+                            <constraint firstItem="EYO-Wl-tHW" firstAttribute="top" secondItem="mNx-8k-xKn" secondAttribute="bottom" id="KGY-sn-3Dy"/>
+                            <constraint firstAttribute="trailing" secondItem="Jjb-eN-fb9" secondAttribute="trailing" id="iCo-6D-Hl8"/>
+                            <constraint firstItem="Jjb-eN-fb9" firstAttribute="top" secondItem="dR5-jS-aTF" secondAttribute="bottom" constant="20" id="ivy-G5-GdJ"/>
+                            <constraint firstAttribute="width" secondItem="EYO-Wl-tHW" secondAttribute="width" id="kA3-v8-Vpc"/>
+                            <constraint firstItem="EYO-Wl-tHW" firstAttribute="leading" secondItem="SIF-hR-yDb" secondAttribute="leading" id="ktO-fx-Ni9"/>
+                            <constraint firstItem="Jjb-eN-fb9" firstAttribute="top" secondItem="1rZ-YV-YlJ" secondAttribute="bottom" constant="-84" id="svf-U6-N8f"/>
+                            <constraint firstAttribute="trailing" secondItem="dR5-jS-aTF" secondAttribute="trailing" constant="20" id="xEr-Ai-IPh"/>
+                            <constraint firstItem="1rZ-YV-YlJ" firstAttribute="top" secondItem="EYO-Wl-tHW" secondAttribute="bottom" constant="35" id="xYl-Wm-cy1"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="iSD-OI-2Hh"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonCenter" destination="dR5-jS-aTF" id="vNp-rh-HJI"/>
+                        <outlet property="buttonHowToArrive" destination="JIb-v1-53N" id="aVa-kT-NJc"/>
+                        <outlet property="labelOfficeAddress" destination="hbK-4l-DKD" id="C2q-Gq-ftJ"/>
+                        <outlet property="labelOfficeTitle" destination="LZP-bt-AGR" id="Vai-P6-3YA"/>
+                        <outlet property="layoutConstraintVerticalSpaceFromBottomViewOfficeInfoToView" destination="svf-U6-N8f" id="EVe-ms-uY2"/>
+                        <outlet property="mapView" destination="EYO-Wl-tHW" id="MtG-Ea-LxG"/>
+                        <outlet property="viewOfficeContent" destination="v7g-2u-UYr" id="Hww-h1-Ow5"/>
+                        <outlet property="viewOfficeInfo" destination="Jjb-eN-fb9" id="19x-kA-tPI"/>
+                        <segue destination="Fby-9D-SVa" kind="show" id="Cyk-Os-egu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCd-gB-WFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="136"/>
+        </scene>
     </scenes>
     <resources>
         <image name="microsoft-cloud-based-hackathon-yan-" width="795" height="250"/>
+        <image name="offices_bg_detail" width="16" height="16"/>
+        <image name="offices_btn_gps" width="16" height="16"/>
+        <image name="offices_ico_map" width="16" height="16"/>
     </resources>
 </document>
