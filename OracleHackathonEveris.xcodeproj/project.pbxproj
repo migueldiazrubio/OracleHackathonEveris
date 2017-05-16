@@ -19,6 +19,8 @@
 		C20E92091ECA32EB00266DE8 /* MCSSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */; };
 		C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */; };
 		C20E92161ECAE84100266DE8 /* OMC.plist in Resources */ = {isa = PBXBuildFile; fileRef = C20E92151ECAE84100266DE8 /* OMC.plist */; };
+		C20E921A1ECB001C00266DE8 /* JJMaterialTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */; };
+		C20E921F1ECB013500266DE8 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E921E1ECB013500266DE8 /* UIColor+HexColor.m */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -48,6 +50,10 @@
 		C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSUserSettings.swift; path = Source/MCSUserSettings.swift; sourceTree = "<group>"; };
 		C20E92111ECA354200266DE8 /* OracleHackathonEveris-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OracleHackathonEveris-Bridging-Header.h"; sourceTree = "<group>"; };
 		C20E92151ECAE84100266DE8 /* OMC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OMC.plist; sourceTree = "<group>"; };
+		C20E92181ECB001C00266DE8 /* JJMaterialTextfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMaterialTextfield.h; sourceTree = "<group>"; };
+		C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMaterialTextfield.m; sourceTree = "<group>"; };
+		C20E921D1ECB013500266DE8 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColor.h"; path = "Source/Color+Hex/UIColor+HexColor.h"; sourceTree = "<group>"; };
+		C20E921E1ECB013500266DE8 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColor.m"; path = "Source/Color+Hex/UIColor+HexColor.m"; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		279FE44F1EC5B7C800781CF4 /* OracleHackathonEveris */ = {
 			isa = PBXGroup;
 			children = (
+				C20E921B1ECB002C00266DE8 /* Objective-C */,
 				C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */,
 				C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */,
 				C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */,
@@ -257,6 +264,34 @@
 			children = (
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C20E92171ECB001C00266DE8 /* JJMaterialTextfield */ = {
+			isa = PBXGroup;
+			children = (
+				C20E92181ECB001C00266DE8 /* JJMaterialTextfield.h */,
+				C20E92191ECB001C00266DE8 /* JJMaterialTextfield.m */,
+			);
+			name = JJMaterialTextfield;
+			path = Source/JJMaterialTextfield;
+			sourceTree = "<group>";
+		};
+		C20E921B1ECB002C00266DE8 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				C20E921C1ECB010F00266DE8 /* Color+Hex */,
+				C20E92171ECB001C00266DE8 /* JJMaterialTextfield */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		C20E921C1ECB010F00266DE8 /* Color+Hex */ = {
+			isa = PBXGroup;
+			children = (
+				C20E921D1ECB013500266DE8 /* UIColor+HexColor.h */,
+				C20E921E1ECB013500266DE8 /* UIColor+HexColor.m */,
+			);
+			name = "Color+Hex";
 			sourceTree = "<group>";
 		};
 		C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */ = {
@@ -577,6 +612,8 @@
 				C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */,
 				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
 				279FE4511EC5B7C800781CF4 /* AppDelegate.swift in Sources */,
+				C20E921A1ECB001C00266DE8 /* JJMaterialTextfield.m in Sources */,
+				C20E921F1ECB013500266DE8 /* UIColor+HexColor.m in Sources */,
 				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
 				C20E92001EC5D75900266DE8 /* MapViewController.swift in Sources */,
 			);

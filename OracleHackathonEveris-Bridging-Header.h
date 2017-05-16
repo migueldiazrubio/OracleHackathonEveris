@@ -28,4 +28,7 @@
 #import "OMCMobileBackend+OMC_Synchronization.h"
 #import "OMCSyncPolicy.h"
 
+#import "JJMaterialTextfield.h"
+#import "UIColor+HexColor.h"
+
 #endif 
