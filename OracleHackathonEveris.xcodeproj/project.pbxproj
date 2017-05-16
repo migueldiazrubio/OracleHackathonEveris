@@ -18,6 +18,7 @@
 		C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */; };
 		C20E92091ECA32EB00266DE8 /* MCSSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */; };
 		C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */; };
+		C20E92161ECAE84100266DE8 /* OMC.plist in Resources */ = {isa = PBXBuildFile; fileRef = C20E92151ECAE84100266DE8 /* OMC.plist */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -46,6 +47,7 @@
 		C20E92071ECA32EB00266DE8 /* MCSSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSSyncManager.swift; path = Source/MCSSyncManager.swift; sourceTree = "<group>"; };
 		C20E92081ECA32EB00266DE8 /* MCSUserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSUserSettings.swift; path = Source/MCSUserSettings.swift; sourceTree = "<group>"; };
 		C20E92111ECA354200266DE8 /* OracleHackathonEveris-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OracleHackathonEveris-Bridging-Header.h"; sourceTree = "<group>"; };
+		C20E92151ECAE84100266DE8 /* OMC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OMC.plist; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				279FE4571EC5B7C800781CF4 /* Assets.xcassets */,
 				279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */,
 				279FE45C1EC5B7C800781CF4 /* Info.plist */,
+				C20E92151ECAE84100266DE8 /* OMC.plist */,
 			);
 			path = OracleHackathonEveris;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			files = (
 				279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */,
 				C2F2B2911EC5CC2100ACE7CB /* VersionInfo.plist in Resources */,
+				C20E92161ECAE84100266DE8 /* OMC.plist in Resources */,
 				C2F2B2921EC5CC2100ACE7CB /* INFO.txt in Resources */,
 				279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */,
 				C2F2B2941EC5CC2100ACE7CB /* OMLocalizable.strings in Resources */,
