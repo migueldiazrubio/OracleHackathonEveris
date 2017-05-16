@@ -139,10 +139,11 @@
 
 - (void)performLocateOfficesRequest {
     
-    self.offices = [NEOLMockRequestManager mockLocateOfficesRequest];
-    [self updateOffices];
-    [self drawLine];
-    
+    //self.offices = [NEOLMockRequestManager mockLocateOfficesRequest];
+    if (self.offices.count >0){
+        [self updateOffices];
+        [self drawLine];
+    }
 }
 
 - (void)performGeolocalizationRequest {
@@ -347,16 +348,21 @@
 
 
 -(void)drawLine{
-    CLLocationCoordinate2D coordinateArray[4];
-    coordinateArray[0] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[0] latitude] doubleValue], [[(NEOLOffice *)self.offices[0] longitude] doubleValue]);
-    coordinateArray[1] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[1] latitude] doubleValue], [[(NEOLOffice *)self.offices[1] longitude] doubleValue]);
-    coordinateArray[2] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[2] latitude] doubleValue], [[(NEOLOffice *)self.offices[2] longitude] doubleValue]);
-    coordinateArray[3] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[3] latitude] doubleValue], [[(NEOLOffice *)self.offices[3] longitude] doubleValue]);
     
-    self.routeLine = [MKPolyline polylineWithCoordinates:coordinateArray count:4];
-    /***********************************************/
+    if (self.offices.count > 1) {
+        CLLocationCoordinate2D coordinateArray[self.offices.count];
+        
+        for (int i = 0; i< self.offices.count; i++) {
+            coordinateArray[i] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[i] latitude] doubleValue], [[(NEOLOffice *)self.offices[i] longitude] doubleValue]);
+        }
+        
+        self.routeLine = [MKPolyline polylineWithCoordinates:coordinateArray count:self.offices.count];
+        /***********************************************/
+        
+        [_mapView addOverlay:self.routeLine];
+    }
     
-    [_mapView addOverlay:self.routeLine];
+    
 }
 
 
