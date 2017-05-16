@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -115,8 +115,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKi-Oh-Qg2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKi-Oh-Qg2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BasicCell" editingAccessoryType="checkmark" textLabel="vSC-8z-Sdn" style="IBUITableViewCellStyleDefault" id="caz-2e-4u2">
@@ -138,18 +138,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-mN-oHl">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <state key="normal" title="Seleccionar"/>
+                                <connections>
+                                    <action selector="selectedButtonPressed:" destination="5W8-By-3NZ" eventType="touchUpInside" id="LvP-7W-bdB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wLV-mN-oHl" secondAttribute="trailing" constant="16" id="155-dI-hBK"/>
+                            <constraint firstItem="wLV-mN-oHl" firstAttribute="top" secondItem="RKi-Oh-Qg2" secondAttribute="bottom" constant="13" id="6dc-bU-tRH"/>
+                            <constraint firstItem="URj-Gd-BeL" firstAttribute="top" secondItem="wLV-mN-oHl" secondAttribute="bottom" constant="20" id="9Pf-ba-4S0"/>
                             <constraint firstAttribute="trailing" secondItem="RKi-Oh-Qg2" secondAttribute="trailing" id="AAE-gz-7K4"/>
                             <constraint firstItem="RKi-Oh-Qg2" firstAttribute="leading" secondItem="6qU-7h-O8n" secondAttribute="leading" id="Wex-WE-hir"/>
                             <constraint firstItem="RKi-Oh-Qg2" firstAttribute="top" secondItem="6qU-7h-O8n" secondAttribute="top" id="dCj-Ps-Wbc"/>
-                            <constraint firstItem="URj-Gd-BeL" firstAttribute="top" secondItem="RKi-Oh-Qg2" secondAttribute="bottom" id="lGi-Jx-ydc"/>
+                            <constraint firstItem="URj-Gd-BeL" firstAttribute="top" secondItem="RKi-Oh-Qg2" secondAttribute="bottom" constant="63" id="lGi-Jx-ydc"/>
+                            <constraint firstItem="wLV-mN-oHl" firstAttribute="leading" secondItem="6qU-7h-O8n" secondAttribute="leading" constant="16" id="mZe-Aj-P3c"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectedButton" destination="wLV-mN-oHl" id="y3Y-Gd-iFp"/>
                         <outlet property="tableView" destination="RKi-Oh-Qg2" id="7VK-Nl-PVM"/>
-                        <segue destination="L3x-W9-uqv" kind="show" id="3db-Bk-Pls"/>
+                        <segue destination="L3x-W9-uqv" kind="show" identifier="showMapSegue" id="3db-Bk-Pls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5as-t8-V2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,7 +277,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-Wl-tHW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-Wl-tHW">
                                 <rect key="frame" x="0.0" y="20" width="375" height="548"/>
                                 <connections>
                                     <outlet property="delegate" destination="L3x-W9-uqv" id="IkW-wM-YOq"/>
