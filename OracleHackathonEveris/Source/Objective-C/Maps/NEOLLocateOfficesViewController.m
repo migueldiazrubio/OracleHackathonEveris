@@ -62,7 +62,6 @@
         
         [self initializeMapViewCenteringInCoordinate:kMadridCenter];
         
-        [self buttonCenterTouchUpInside:nil];
     }
     
     [self.buttonHowToArrive setExclusiveTouch:YES];
@@ -74,6 +73,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
     
 }
 
@@ -175,6 +175,8 @@
         
         
     }
+    
+    [self buttonCenterTouchUpInside:nil];
 }
 
 - (void)performGeolocalizationRequest {
