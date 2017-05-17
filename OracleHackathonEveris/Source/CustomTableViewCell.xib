@@ -39,17 +39,17 @@
                         </constraints>
                     </view>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:33:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-H2-KFW">
-                        <rect key="frame" x="194" y="19" width="118" height="21"/>
+                        <rect key="frame" x="245" y="19" width="67" height="21"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="118" id="Di6-cf-YZO"/>
+                            <constraint firstAttribute="width" constant="67" id="Di6-cf-YZO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.20000000000000001" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.29019607843137252" green="0.31372549019607843" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="VJI-ke-CyU" secondAttribute="bottom" constant="11" id="2OW-HI-PX1"/>
                     <constraint firstItem="P3w-B4-Q3X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="58X-QY-2lJ"/>
@@ -63,7 +63,7 @@
                     <constraint firstItem="VJI-ke-CyU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="imj-2J-IGv"/>
                     <constraint firstAttribute="trailing" secondItem="P3w-B4-Q3X" secondAttribute="trailing" id="jOO-TO-Db0"/>
                     <constraint firstAttribute="trailing" secondItem="M2k-H2-KFW" secondAttribute="trailing" constant="8" id="kLi-1s-qtr"/>
-                    <constraint firstItem="M2k-H2-KFW" firstAttribute="leading" secondItem="VJI-ke-CyU" secondAttribute="trailing" constant="-43" id="wgq-1a-Ofh"/>
+                    <constraint firstItem="M2k-H2-KFW" firstAttribute="leading" secondItem="VJI-ke-CyU" secondAttribute="trailing" constant="8" id="wgq-1a-Ofh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

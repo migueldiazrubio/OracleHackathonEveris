@@ -419,7 +419,7 @@
     self.selectedPoi.status = @"1";
     [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
         if (success == true) {
-            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+            //[self performSegueWithIdentifier:@"showFinishSegue" sender:self];
         }else{
             NSLog(@"Error put");
         }

@@ -24,6 +24,7 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
+        
         // Do any additional setup after loading the view.
     }
 
@@ -36,23 +37,23 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if officeDoneList[indexPath.row].address != "" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
-            cell?.checkImage.isHidden = true
-            cell?.labelAddress.text = officeDoneList[indexPath.row].address
-            let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short)
-            cell?.labelTime.text = timestamp
-            cell?.labelTime.isHidden = false
-            return cell!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {            let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
+        cell?.checkImage.isHidden = true
+        cell?.labelAddress.text = officeDoneList[indexPath.row].address
+        let calendar = Calendar.current
+        let date = calendar.date(byAdding: .minute, value: Int(arc4random_uniform(60)), to: Date())
+        let timestamp = DateFormatter.localizedString(from: date!, dateStyle: .none, timeStyle: .short)
+        
+        cell?.labelTime.text = timestamp
+        cell?.labelTime.isHidden = false
+        if indexPath.row == 0{
+            cell?.labelTime.isHidden = true
         }
-        else {
-            return UITableViewCell()
-        }
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return officeDoneList.count - 1
+        return officeDoneList.count
     }
 
     /*
