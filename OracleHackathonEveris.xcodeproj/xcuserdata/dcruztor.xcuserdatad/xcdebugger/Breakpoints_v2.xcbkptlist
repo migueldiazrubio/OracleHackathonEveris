@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516715590.805405"
+            timestampString = "516720455.798002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516715590.805405"
+            timestampString = "516720455.798002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-locationManager:didUpdateLocations:"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516715590.805405"
+            timestampString = "516721130.62331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "-mapView:didSelectAnnotationView:"
             landmarkType = "7">
          </BreakpointContent>

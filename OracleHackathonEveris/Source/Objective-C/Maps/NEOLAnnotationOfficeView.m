@@ -42,6 +42,7 @@
 }
 
 -(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate{
+    _coordinate = newCoordinate;
 }
 
 @end

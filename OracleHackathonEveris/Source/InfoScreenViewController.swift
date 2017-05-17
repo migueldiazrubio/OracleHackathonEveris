@@ -14,6 +14,7 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonEnded: UIButton!
     @IBOutlet weak var gifImage: UIImageView!
+    var date = Date()
     
     var officeDoneList : [Poi] = []
     
@@ -41,7 +42,8 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         cell?.checkImage.isHidden = true
         cell?.labelAddress.text = officeDoneList[indexPath.row].address
         let calendar = Calendar.current
-        let date = calendar.date(byAdding: .minute, value: Int(arc4random_uniform(60)), to: Date())
+        let date = calendar.date(byAdding: .minute, value: Int(arc4random_uniform(15)), to: self.date)
+        self.date = date!
         let timestamp = DateFormatter.localizedString(from: date!, dateStyle: .none, timeStyle: .short)
         
         cell?.labelTime.text = timestamp

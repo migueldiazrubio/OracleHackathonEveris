@@ -193,15 +193,11 @@
             (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
             [locateOfficesViewController setViewOfficeInfoWithOffice:office];
             self.selectedPoi = office;
-            [locateOfficesViewController animateToShowViewOfficeInfo];
+            if (office.address) {
+                [locateOfficesViewController animateToShowViewOfficeInfo];
+            }
             
-//            MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
-//            point.coordinate = CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue]);
-             //[self animateAnnotation:point];
             
-//            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue])];
-            
-//            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake(33,33)];
         }
     }
 }
@@ -309,6 +305,9 @@
         
         [self showOfficeDetailWithAnnotationView:view];
         
+        
+        [self poiPressed];
+        [self.view layoutIfNeeded];
     }
 }
 
@@ -407,6 +406,8 @@
         
         [sortedArray addObject:[self sortDistances:dictionaryOfDistances]];
         [arrayAux removeObject:[self sortDistances:dictionaryOfDistances]];
+        
+        dictionaryOfDistances = [[NSMutableDictionary alloc] init];
     }
     
     
@@ -415,11 +416,28 @@
 }
 - (IBAction)buttonPoiPressed:(id)sender {
 
+//    MCSService * service = [[MCSService alloc] init];
+//    self.selectedPoi.status = @"1";
+//    [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
+//        if (success == true) {
+//            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+//        }else{
+//            NSLog(@"Error put");
+//        }
+//    }];
+}
+
+-(void)poiPressed{
     MCSService * service = [[MCSService alloc] init];
     self.selectedPoi.status = @"1";
     [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
         if (success == true) {
-            //[self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+            for (Poi *poi in self.offices) {
+                if ([poi.status isEqualToString:@"0"]) {
+                    return;
+                }
+            }
+            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
         }else{
             NSLog(@"Error put");
         }
@@ -461,5 +479,6 @@
     vC.officeDoneList = self.offices;
     
 }
+
 
 @end
