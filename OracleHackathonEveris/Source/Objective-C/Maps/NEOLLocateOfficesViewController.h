@@ -13,7 +13,7 @@
 #define kOfficeAnnotationViewIdentifier @"NEOLOfficeIdentifier"
 #define kUserAnnotationViewIdentifier @"NEOLUserIdentifier"
 
-#define kMadridCenter CLLocationCoordinate2DMake(40.416944, -3.703611)
+#define kMadridCenter CLLocationCoordinate2DMake(40.5211523, -3.8913309)
 #define KLatitudMadrid 40.5211523
 #define KLongitudMadrid -3.8913309
 #define kInitZoomLevel 10

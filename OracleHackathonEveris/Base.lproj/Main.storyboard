@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fKo-fj-ick">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,26 +48,27 @@
                                     <action selector="buttonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph0-9i-KwJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="everdrone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-WI-sYe">
-                                <rect key="frame" x="16" y="23" width="343" height="83"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoxcode" translatesAutoresizingMaskIntoConstraints="NO" id="H4P-Qf-LsZ">
+                                <rect key="frame" x="59" y="106" width="257" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="Bgy-FM-Ql3"/>
+                                    <constraint firstAttribute="height" constant="103" id="fUf-tC-yko"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200.5" id="094-y3-ciu"/>
                             <constraint firstItem="2Gb-b2-ALD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="2o7-rD-M1t"/>
-                            <constraint firstAttribute="trailing" secondItem="0dT-WI-sYe" secondAttribute="trailing" constant="62" id="8tc-9U-BcL"/>
                             <constraint firstAttribute="trailing" secondItem="CH3-Eu-iNe" secondAttribute="trailing" constant="16" id="DU5-4a-VpZ"/>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Haq-HE-ZYx"/>
-                            <constraint firstItem="0dT-WI-sYe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hbu-tn-oGP"/>
                             <constraint firstItem="Rlp-3g-TgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ibk-Pt-42D"/>
                             <constraint firstItem="2Gb-b2-ALD" firstAttribute="top" secondItem="Rlp-3g-TgZ" secondAttribute="bottom" constant="30" id="LiX-kK-Z2J"/>
                             <constraint firstAttribute="trailing" secondItem="2Gb-b2-ALD" secondAttribute="trailing" constant="16" id="OQb-F5-E8Z"/>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="top" secondItem="2Gb-b2-ALD" secondAttribute="bottom" constant="37" id="ZBh-bX-arZ"/>
-                            <constraint firstItem="0dT-WI-sYe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="62" id="sh0-de-8Tt"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdN-jg-wSe"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="h8w-t9-tE9"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUJ-9u-6Va"/>
                             <constraint firstAttribute="trailing" secondItem="Rlp-3g-TgZ" secondAttribute="trailing" constant="16" id="yEB-gF-h82"/>
                         </constraints>
                     </view>
@@ -204,9 +205,16 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhorabuena has terminado la ruta seleccionada has visitados las siguientes direcciones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-Tk-FXB">
                                 <rect key="frame" x="16" y="88" width="343" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gif.gif" translatesAutoresizingMaskIntoConstraints="NO" id="ExH-b4-2sh">
+                                <rect key="frame" x="120" y="178" width="135" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="6wE-oX-e70"/>
+                                    <constraint firstAttribute="width" constant="135" id="Gu3-DN-QaQ"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-5x-GDF">
                                 <rect key="frame" x="16" y="597" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.70588235290000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,26 +229,30 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jq0-ee-YVr">
-                                <rect key="frame" x="0.0" y="175" width="375" height="409"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="267" width="375" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jq0-ee-YVr" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" id="1cc-0n-SYo"/>
                             <constraint firstAttribute="trailing" secondItem="jq0-ee-YVr" secondAttribute="trailing" id="A9C-OS-FhK"/>
                             <constraint firstAttribute="trailing" secondItem="CA0-Tk-FXB" secondAttribute="trailing" constant="16" id="Dio-VD-qQO"/>
                             <constraint firstItem="l1F-5x-GDF" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="16" id="HeO-j1-knz"/>
                             <constraint firstItem="eN1-Lm-7hV" firstAttribute="top" secondItem="l1F-5x-GDF" secondAttribute="bottom" constant="20" id="aEr-Dx-RgL"/>
-                            <constraint firstItem="jq0-ee-YVr" firstAttribute="top" secondItem="CA0-Tk-FXB" secondAttribute="bottom" constant="8" id="be6-5e-jHJ"/>
                             <constraint firstItem="CA0-Tk-FXB" firstAttribute="top" secondItem="gjH-7r-4FP" secondAttribute="bottom" constant="24" id="dnc-oo-hOJ"/>
                             <constraint firstItem="l1F-5x-GDF" firstAttribute="top" secondItem="jq0-ee-YVr" secondAttribute="bottom" constant="13" id="jkd-Ut-NT0"/>
                             <constraint firstAttribute="trailing" secondItem="l1F-5x-GDF" secondAttribute="trailing" constant="16" id="rS9-a2-KMw"/>
+                            <constraint firstItem="jq0-ee-YVr" firstAttribute="top" secondItem="ExH-b4-2sh" secondAttribute="bottom" constant="11" id="se1-yn-8cF"/>
+                            <constraint firstAttribute="trailing" secondItem="ExH-b4-2sh" secondAttribute="trailing" constant="120" id="wo1-Xe-r9n"/>
+                            <constraint firstItem="ExH-b4-2sh" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="120" id="yTF-5i-BGT"/>
                             <constraint firstItem="CA0-Tk-FXB" firstAttribute="leading" secondItem="wSq-NT-zhL" secondAttribute="leading" constant="16" id="zDf-Me-Bln"/>
+                            <constraint firstItem="ExH-b4-2sh" firstAttribute="top" secondItem="CA0-Tk-FXB" secondAttribute="bottom" constant="11" id="zFz-OP-0rf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonEnded" destination="l1F-5x-GDF" id="uMs-WV-AcE"/>
+                        <outlet property="gifImage" destination="ExH-b4-2sh" id="RBN-yZ-jQR"/>
                         <outlet property="tableView" destination="jq0-ee-YVr" id="G7i-RW-xqb"/>
                         <outlet property="titleLabel" destination="CA0-Tk-FXB" id="82j-i5-Jgk"/>
                     </connections>
@@ -416,6 +428,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gif.gif" width="324" height="232"/>
+        <image name="logoxcode" width="1142" height="531"/>
         <image name="offices_bg_detail" width="16" height="16"/>
         <image name="offices_btn_gps" width="16" height="16"/>
         <image name="offices_ico_map" width="16" height="16"/>
