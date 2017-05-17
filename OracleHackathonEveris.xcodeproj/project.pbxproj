@@ -12,7 +12,7 @@
 		279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4541EC5B7C800781CF4 /* Main.storyboard */; };
 		279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4571EC5B7C800781CF4 /* Assets.xcassets */; };
 		279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */; };
-		2F2CE738B7690707C4B6D8DA /* Pods_OracleHackathonEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */; };
+		6C307D6EA66EB91268EB31FF /* Pods_OracleHackathonEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28CC5881C1D65ECDA6E67CD /* Pods_OracleHackathonEveris.framework */; };
 		B1656B961ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */; };
 		B1656B971ECB038F00C774C2 /* NEOLAnnotationOfficeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */; };
 		B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B851ECB038F00C774C2 /* NEOLAddress.m */; };
@@ -57,7 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OracleHackathonEveris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCA63E3C0E09D95E6E5D9D3 /* Pods-OracleHackathonEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.release.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.release.xcconfig"; sourceTree = "<group>"; };
 		279FE44D1EC5B7C800781CF4 /* OracleHackathonEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OracleHackathonEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279FE4501EC5B7C800781CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279FE4521EC5B7C800781CF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		B1656BA31ECB0F7100C774C2 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		B1656BA41ECB0F7100C774C2 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		B1656BA71ECB116B00C774C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.debug.xcconfig"; sourceTree = "<group>"; };
 		C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoScreenViewController.swift; path = Source/InfoScreenViewController.swift; sourceTree = "<group>"; };
 		C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSelectViewController.swift; path = Source/TableSelectViewController.swift; sourceTree = "<group>"; };
 		C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Source/LoginViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +224,8 @@
 		C2F2B2871EC5CC2100ACE7CB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
 		C2F2B2881EC5CC2100ACE7CB /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
 		C2F2B2891EC5CC2100ACE7CB /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
-		C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.release.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.release.xcconfig"; sourceTree = "<group>"; };
+		C87E01C1C80C0BE33435FFF9 /* Pods-OracleHackathonEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.debug.xcconfig"; sourceTree = "<group>"; };
+		D28CC5881C1D65ECDA6E67CD /* Pods_OracleHackathonEveris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OracleHackathonEveris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +241,7 @@
 				C2F2B2931EC5CC2100ACE7CB /* libIDMMobileSDKv2Library.a in Frameworks */,
 				C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */,
 				C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */,
-				2F2CE738B7690707C4B6D8DA /* Pods_OracleHackathonEveris.framework in Frameworks */,
+				6C307D6EA66EB91268EB31FF /* Pods_OracleHackathonEveris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +255,7 @@
 				279FE44E1EC5B7C800781CF4 /* Products */,
 				C20E92111ECA354200266DE8 /* OracleHackathonEveris-Bridging-Header.h */,
 				B1656BA61ECB116B00C774C2 /* Frameworks */,
-				FEE0BFD13CD1E7C758A9B9CD /* Pods */,
+				DE08C71073E62099FE39A9B5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				B1656BA71ECB116B00C774C2 /* MapKit.framework */,
-				0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */,
+				D28CC5881C1D65ECDA6E67CD /* Pods_OracleHackathonEveris.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -639,11 +639,11 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		FEE0BFD13CD1E7C758A9B9CD /* Pods */ = {
+		DE08C71073E62099FE39A9B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */,
-				C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */,
+				C87E01C1C80C0BE33435FFF9 /* Pods-OracleHackathonEveris.debug.xcconfig */,
+				0CCA63E3C0E09D95E6E5D9D3 /* Pods-OracleHackathonEveris.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -655,12 +655,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279FE45F1EC5B7C800781CF4 /* Build configuration list for PBXNativeTarget "OracleHackathonEveris" */;
 			buildPhases = (
-				056D02D8AA2E8EBF4775F48F /* [CP] Check Pods Manifest.lock */,
+				ABDBA6A949F9DE29E2C39F43 /* [CP] Check Pods Manifest.lock */,
 				279FE4491EC5B7C800781CF4 /* Sources */,
 				279FE44A1EC5B7C800781CF4 /* Frameworks */,
 				279FE44B1EC5B7C800781CF4 /* Resources */,
-				C4B2ECEBF53A45B814E9ABC9 /* [CP] Embed Pods Frameworks */,
-				82345E98133E8DBF1FF272D6 /* [CP] Copy Pods Resources */,
+				F1A09148E528F4CA5A17D069 /* [CP] Embed Pods Frameworks */,
+				FE52FDFDE9E06DE1DE922070 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -683,7 +683,7 @@
 				TargetAttributes = {
 					279FE44C1EC5B7C800781CF4 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3WSJD6HPTZ;
+						DevelopmentTeam = CKJPC95UYE;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -765,7 +765,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		056D02D8AA2E8EBF4775F48F /* [CP] Check Pods Manifest.lock */ = {
+		ABDBA6A949F9DE29E2C39F43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -780,22 +780,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		82345E98133E8DBF1FF272D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4B2ECEBF53A45B814E9ABC9 /* [CP] Embed Pods Frameworks */ = {
+		F1A09148E528F4CA5A17D069 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -808,6 +793,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE52FDFDE9E06DE1DE922070 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1000,11 +1000,11 @@
 		};
 		279FE4601EC5B7C800781CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */;
+			baseConfigurationReference = C87E01C1C80C0BE33435FFF9 /* Pods-OracleHackathonEveris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3WSJD6HPTZ;
+				DEVELOPMENT_TEAM = CKJPC95UYE;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1016,19 +1016,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_DISABLE_SAFETY_CHECKS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OracleHackathonEveris-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		279FE4611EC5B7C800781CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */;
+			baseConfigurationReference = 0CCA63E3C0E09D95E6E5D9D3 /* Pods-OracleHackathonEveris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3WSJD6HPTZ;
+				DEVELOPMENT_TEAM = CKJPC95UYE;
 				INFOPLIST_FILE = OracleHackathonEveris/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1040,7 +1041,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.OracleHackathonEveris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_DISABLE_SAFETY_CHECKS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "OracleHackathonEveris-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -8,16 +8,23 @@
 
 import UIKit
 
-class InfoScreenViewController: UIViewController {
+class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonEnded: UIButton!
     @IBOutlet weak var gifImage: UIImageView!
+    
+    var officeDoneList : [Poi] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let gif = UIImage(gifName: "Gif")
         gifImage.setGifImage(gif)
         self.title = "Resumen"
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         // Do any additional setup after loading the view.
     }
 
@@ -30,7 +37,16 @@ class InfoScreenViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
+        cell?.checkImage.isHidden = true
+        cell?.labelAddress.text = officeDoneList[indexPath.row].address
+        return cell!
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return officeDoneList.count
+    }
 
     /*
     // MARK: - Navigation

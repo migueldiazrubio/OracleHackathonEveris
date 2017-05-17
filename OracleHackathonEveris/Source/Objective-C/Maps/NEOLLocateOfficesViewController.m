@@ -16,7 +16,7 @@
 #import "MKMapView+ZoomLevel.h"
 #import "GGeocodeResponse.h"
 #import "LatLngPoint.h"
-
+#import "OracleHackathonEveris-swift.h"
 
 @interface NEOLLocateOfficesViewController () <CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -33,6 +33,7 @@
 @property (nonatomic, retain) MKPolyline *routeLine; //your line
 @property (nonatomic, retain) MKPolylineRenderer *routeLineView; //overlay view
 @property (nonatomic, strong) CLGeocoder *ceo;
+@property (nonatomic, strong) Poi * selectedPoi;
 
 @end
 
@@ -190,6 +191,7 @@
             id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
             (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
             [locateOfficesViewController setViewOfficeInfoWithOffice:office];
+            self.selectedPoi = office;
             [locateOfficesViewController animateToShowViewOfficeInfo];
             
             MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
@@ -367,8 +369,8 @@
         if(nil == self.routeLineView)
         {
             self.routeLineView = [[MKPolylineRenderer alloc] initWithPolyline:self.routeLine] ;
-            self.routeLineView.fillColor = [UIColor greenColor];
-            self.routeLineView.strokeColor = [UIColor greenColor];
+            self.routeLineView.fillColor = [UIColor colorWithHexString:@"98b433"];
+            self.routeLineView.strokeColor = [UIColor colorWithHexString:@"333639"];
             self.routeLineView.lineWidth = 3;
             
         }
@@ -410,6 +412,19 @@
     
     return sortedArray;
 }
+- (IBAction)buttonPoiPressed:(id)sender {
+
+    MCSService * service = [[MCSService alloc] init];
+    self.selectedPoi.status = @"1";
+    [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
+        if (success == true) {
+            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Ha habido algun problema con la conexion" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+            alert.show;
+        }
+    }];
+}
 
 -(Poi *)sortDistances: (NSDictionary *)dict{
     NSArray *sortedKeys = [[dict allKeys] sortedArrayUsingSelector: @selector(compare:)];
@@ -439,6 +454,12 @@
     [self.mapView reloadInputViews];
     [self.mapView setNeedsDisplay];
     //}
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    InfoScreenViewController *vC = [segue destinationViewController];
+    vC.officeDoneList = self.offices;
+    
 }
 
 @end

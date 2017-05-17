@@ -51,10 +51,10 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
         service.findAll(completion: { (points) in
             if (points?.count)! > 0{
                 self.officeList = points!
+                self.performSegue(withIdentifier: "showSegueTable", sender: self)
             }
-            self.performSegue(withIdentifier: "showSegueTable", sender: self)
         })
-         ///authenticate(anonymously: false);
+        ///authenticate(anonymously: false);
      }
     
     override func viewWillAppear(_ animated: Bool) {
