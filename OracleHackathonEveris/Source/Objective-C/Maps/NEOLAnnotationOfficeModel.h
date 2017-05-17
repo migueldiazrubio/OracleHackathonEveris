@@ -1,0 +1,25 @@
+//
+//  NEOLAnnotationOfficeModel.h
+//  NEOL
+//
+//  Created by Jose Miguel Benedicto Ruiz on 02/07/14.
+//  Copyright (c) 2014 ameu8. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import "NEOLOffice.h"
+@class Poi;
+
+@interface NEOLAnnotationOfficeModel : NSObject <MKAnnotation>
+
+// Inherited from MKAnnotationProtocol
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+
+@property (nonatomic, strong) Poi *office;
+
+- (id)initWithOffice:(Poi *)office;
+
+@end

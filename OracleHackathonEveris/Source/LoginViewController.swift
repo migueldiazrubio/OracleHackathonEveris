@@ -8,17 +8,26 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDelegate {
 
-    @IBOutlet weak var passTextfield: UITextField!
-    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passTextfield: JJMaterialTextfield!
+    @IBOutlet weak var userTextField: JJMaterialTextfield!
     @IBOutlet weak var buttonLogin: UIButton!
-    
+    var officeList : [Poi] = []
     var mask:UIView?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        passTextfield.delegateJJ = self
+        passTextfield.delegate = self
+        
+        userTextField.delegateJJ = self
+        userTextField.delegate = self
+        
+        userTextField.initTextfield(withPlaceholder: "Username", iconActive: nil, iconEmpty: nil, textColor: "ffffff", with:UIFont(name: "Arial", size:16), lineColor: UIColor.white, withLineBack: UIColor.white, errorColor: UIColor.red, upPlaceHolder: true, withImage: false, andError: true, andIsLineUp: true, phColor: "ffffff", andFontForPhUp: UIFont(name: "Arial", size:13))
+        
+        passTextfield.initTextfield(withPlaceholder: "Password", iconActive: nil, iconEmpty: nil, textColor: "ffffff", with:UIFont(name: "Arial", size:16), lineColor: UIColor.white, withLineBack: UIColor.white, errorColor: UIColor.red, upPlaceHolder: true, withImage: false, andError: true, andIsLineUp: true, phColor: "ffffff", andFontForPhUp: UIFont(name: "Arial", size:13))
+        
         // Do any additional setup after loading the view.
     }
 
@@ -37,8 +46,17 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
  */
-     @IBAction func buttonLoginPressed(_ sender: Any) {
-         authenticate(anonymously: false);
+     @IBAction private func buttonLoginPressed(_ sender: Any) {
+        let service : MCSService! = MCSService()
+        service.findAll(completion: { (points) in
+            if (points?.count)! > 0{
+                self.officeList = points!
+            }else{
+                self.officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [Poi]
+            }
+            self.performSegue(withIdentifier: "showSegueTable", sender: self)
+        })
+         ///authenticate(anonymously: false);
      }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,6 +126,11 @@ class LoginViewController: UIViewController {
             mask?.isHidden = true;
             self.view.willRemoveSubview(mask!)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vC = segue.destination as! TableSelectViewController
+        vC.officeList = self.officeList 
     }
 
 }

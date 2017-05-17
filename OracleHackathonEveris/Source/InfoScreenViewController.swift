@@ -9,10 +9,15 @@
 import UIKit
 
 class InfoScreenViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet weak var buttonEnded: UIButton!
+    @IBOutlet weak var gifImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let gif = UIImage(gifName: "Gif")
+        gifImage.setGifImage(gif)
+        self.title = "Resumen"
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +25,11 @@ class InfoScreenViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func buttonEndedPresse(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
 
     /*
