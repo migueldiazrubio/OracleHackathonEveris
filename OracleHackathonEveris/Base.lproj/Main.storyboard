@@ -48,26 +48,27 @@
                                     <action selector="buttonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph0-9i-KwJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="everdrone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-WI-sYe">
-                                <rect key="frame" x="16" y="23" width="343" height="83"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoxcode" translatesAutoresizingMaskIntoConstraints="NO" id="H4P-Qf-LsZ">
+                                <rect key="frame" x="59" y="106" width="257" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="Bgy-FM-Ql3"/>
+                                    <constraint firstAttribute="height" constant="103" id="fUf-tC-yko"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200.5" id="094-y3-ciu"/>
                             <constraint firstItem="2Gb-b2-ALD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="2o7-rD-M1t"/>
-                            <constraint firstAttribute="trailing" secondItem="0dT-WI-sYe" secondAttribute="trailing" constant="62" id="8tc-9U-BcL"/>
                             <constraint firstAttribute="trailing" secondItem="CH3-Eu-iNe" secondAttribute="trailing" constant="16" id="DU5-4a-VpZ"/>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Haq-HE-ZYx"/>
-                            <constraint firstItem="0dT-WI-sYe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hbu-tn-oGP"/>
                             <constraint firstItem="Rlp-3g-TgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Ibk-Pt-42D"/>
                             <constraint firstItem="2Gb-b2-ALD" firstAttribute="top" secondItem="Rlp-3g-TgZ" secondAttribute="bottom" constant="30" id="LiX-kK-Z2J"/>
                             <constraint firstAttribute="trailing" secondItem="2Gb-b2-ALD" secondAttribute="trailing" constant="16" id="OQb-F5-E8Z"/>
                             <constraint firstItem="CH3-Eu-iNe" firstAttribute="top" secondItem="2Gb-b2-ALD" secondAttribute="bottom" constant="37" id="ZBh-bX-arZ"/>
-                            <constraint firstItem="0dT-WI-sYe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="62" id="sh0-de-8Tt"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdN-jg-wSe"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="h8w-t9-tE9"/>
+                            <constraint firstItem="H4P-Qf-LsZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUJ-9u-6Va"/>
                             <constraint firstAttribute="trailing" secondItem="Rlp-3g-TgZ" secondAttribute="trailing" constant="16" id="yEB-gF-h82"/>
                         </constraints>
                     </view>
@@ -266,7 +267,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fKo-fj-ick" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="go1-WY-Ovt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="go1-WY-Ovt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -428,6 +429,7 @@
     </scenes>
     <resources>
         <image name="Gif.gif" width="324" height="232"/>
+        <image name="logoxcode" width="1142" height="531"/>
         <image name="offices_bg_detail" width="16" height="16"/>
         <image name="offices_btn_gps" width="16" height="16"/>
         <image name="offices_ico_map" width="16" height="16"/>
