@@ -33,6 +33,7 @@
 
 @property (nonatomic, retain) MKPolyline *routeLine; //your line
 @property (nonatomic, retain) MKPolylineRenderer *routeLineView; //overlay view
+@property (nonatomic, strong) CLGeocoder *ceo;
 
 @end
 
@@ -44,7 +45,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = NSLocalizedString(@"MAP_TITLE", nil);
+    self.navigationItem.title = NSLocalizedString(@"MAPA", nil);
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -57,12 +58,10 @@
     }
     [self.locationManager startUpdatingLocation];
     
-    if (![CLLocationManager locationServicesEnabled]) {
-        
-        
-        
-        [self initializeMapViewCenteringInCoordinate:kMadridCenter];
-    }
+//    if (![CLLocationManager locationServicesEnabled]) {
+//        
+//        [self initializeMapViewCenteringInCoordinate:kMadridCenter];
+//    }
     
     [self.buttonHowToArrive setExclusiveTouch:YES];
     [self.buttonCenter setExclusiveTouch:YES];
@@ -72,8 +71,29 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
+    self.ceo= [[CLGeocoder alloc]init];
+    [self.locationManager requestWhenInUseAuthorization];
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    CLLocationCoordinate2D coordinate;
+    
+    coordinate.latitude=self.locationManager.location.coordinate.latitude;
+    coordinate.longitude=self.locationManager.location.coordinate.longitude;
+    
+    NEOLOffice *myPosition = [[NEOLOffice alloc] init];
+    myPosition.latitude = [NSString stringWithFormat:@"%f",coordinate.latitude];
+    myPosition.longitude =[NSString stringWithFormat:@"%f",coordinate.longitude];
+ 
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:0];
+    [mutableArray addObject:myPosition];
+    [mutableArray addObjectsFromArray:self.offices];
+    
+    self.offices = nil;
+    self.offices = [[NSArray alloc] initWithArray:mutableArray];
     
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -140,6 +160,8 @@
 - (void)performLocateOfficesRequest {
     
     //self.offices = [NEOLMockRequestManager mockLocateOfficesRequest];
+    [self sortedArrayForDistance:self.offices];
+    
     if (self.offices.count >0){
         [self updateOffices];
         [self drawLine];
@@ -385,16 +407,25 @@
     return nil;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil) {
-        NSString *longitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-        NSString *latitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-    }
-}
 
+- (NSArray *)sortedArrayForDistance: (NSArray *)array{
+//    NSMutableArray *arrayAux = [[NSMutableArray alloc] initWithArray:array];
+//    NSMutableArray *sortedArray = [[NSMutableArray alloc] initWithCapacity:0];
+//    
+//    [sortedArray addObject:arrayAux[0]];
+//    [arrayAux removeObjectAtIndex:0];
+//    
+//  
+//    for (int i = 1 ; i< array.count; i++) {
+//            CLLocation *locA = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[array objectAtIndex:i] latitude] doubleValue] longitude:[[(NEOLOffice *)[array objectAtIndex:i] longitude] doubleValue]];
+//        
+//            CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[array objectAtIndex:i +1] latitude] doubleValue] longitude:[[(NEOLOffice *)[array objectAtIndex:i +1] longitude] doubleValue]];
+//            CLLocationDistance distance = [locA distanceFromLocation:locB];
+//        
+//    }
+
+    
+    return array;
+}
 
 @end

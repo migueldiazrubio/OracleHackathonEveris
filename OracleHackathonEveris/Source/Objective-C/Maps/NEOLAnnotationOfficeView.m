@@ -24,6 +24,8 @@
         self.image =[UIImage imageNamed:@"offices_poid_office"];
     } else if ([annotationOffice.office.status isEqualToString:kPOITypeGarage]) {
         self.image = [UIImage imageNamed:@"offices_poid_garage"];
+    }else{
+        self.image = [UIImage imageNamed:@"offices_img_point"];
     }
 }
 
@@ -34,6 +36,8 @@
         self.image = selected ? [UIImage imageNamed:@"offices_poid_office_on"] : [UIImage imageNamed:@"offices_poid_office"];
     } else if ([annotationOffice.office.status isEqualToString:kPOITypeGarage]) {
         self.image = selected ? [UIImage imageNamed:@"offices_poid_garage_on"] : [UIImage imageNamed:@"offices_poid_garage"];
+    }else{
+        self.image = selected ? [UIImage imageNamed:@"offices_img_point"] : [UIImage imageNamed:@"offices_img_point"];
     }
 }
 

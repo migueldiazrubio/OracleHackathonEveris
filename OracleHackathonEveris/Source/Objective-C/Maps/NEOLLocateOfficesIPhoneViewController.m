@@ -60,7 +60,7 @@
         self.imageViewOfficeType.image = [UIImage imageNamed:@"offices_ico_garage"];
         //self.viewOfficeType.backgroundColor = [UIColor colorWithHexString:@"f88106"];
         self.labelOfficeType.text = NSLocalizedString(@"GARAGE", nil);
-    }
+    }else
     
     self.labelOfficeTitle.text = office.address;
     self.labelOfficeAddress.text = [office.address description];
