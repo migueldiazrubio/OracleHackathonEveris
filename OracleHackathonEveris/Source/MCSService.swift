@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-final class MCSService {
+final class MCSService : NSObject {
     
-    init() { }
+    override init() { }
     
     static let shared = MCSService()
     
@@ -55,14 +55,14 @@ final class MCSService {
     func modifyPoi(poi: Poi, completion: @escaping (_ success: Bool)->Void) {
         
         let params : Parameters = [
-            "Id": poi.identificator ?? "",
-            "Latitude": poi.latitude ?? "",
-            "Longitude": poi.longitude ?? "",
-            "Status": poi.status ?? "",
-            "RequestTimestamp": poi.requestTimestamp ?? "",
-            "DeliveryTimestamp": poi.deliveryTimestamp ?? "",
-            "Address": poi.address ?? "",
-            "DeliveredBy": poi.deliveredBy ?? ""
+            "Id": poi.identificator,
+            "Latitude": poi.latitude,
+            "Longitude": poi.longitude,
+            "Status": poi.status,
+            "RequestTimestamp": poi.requestTimestamp,
+            "DeliveryTimestamp": poi.deliveryTimestamp,
+            "Address": poi.address,
+            "DeliveredBy": poi.deliveredBy
         ]
         
         Alamofire.request("https://mcs-gse00010161.mobileenv.us2.oraclecloud.com:443/mobile/custom/apiDefinitivaEveris/point", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
@@ -80,14 +80,14 @@ final class MCSService {
     func insertPoi(poi: Poi, completion: @escaping (_ success: Bool)->Void) {
         
         let params : Parameters = [
-            "Id": poi.identificator ?? "",
-            "Latitude": poi.latitude ?? "",
-            "Longitude": poi.longitude ?? "",
-            "Status": poi.status ?? "",
-            "RequestTimestamp": poi.requestTimestamp ?? "",
-            "DeliveryTimestamp": poi.deliveryTimestamp ?? "",
-            "Address": poi.address ?? "",
-            "DeliveredBy": poi.deliveredBy ?? ""
+            "Id": poi.identificator,
+            "Latitude": poi.latitude,
+            "Longitude": poi.longitude,
+            "Status": poi.status,
+            "RequestTimestamp": poi.requestTimestamp,
+            "DeliveryTimestamp": poi.deliveryTimestamp,
+            "Address": poi.address,
+            "DeliveredBy": poi.deliveredBy
         ]
         
         Alamofire.request("https://mcs-gse00010161.mobileenv.us2.oraclecloud.com:443/mobile/custom/apiDefinitivaEveris/point", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in

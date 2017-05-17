@@ -16,7 +16,7 @@
 #import "MKMapView+ZoomLevel.h"
 #import "GGeocodeResponse.h"
 #import "LatLngPoint.h"
-
+#import "OracleHackathonEveris-swift.h"
 
 @interface NEOLLocateOfficesViewController () <CLLocationManagerDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -33,6 +33,7 @@
 @property (nonatomic, retain) MKPolyline *routeLine; //your line
 @property (nonatomic, retain) MKPolylineRenderer *routeLineView; //overlay view
 @property (nonatomic, strong) CLGeocoder *ceo;
+@property (nonatomic, strong) Poi * selectedPoi;
 
 @end
 
@@ -190,6 +191,7 @@
             id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
             (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
             [locateOfficesViewController setViewOfficeInfoWithOffice:office];
+            self.selectedPoi = office;
             [locateOfficesViewController animateToShowViewOfficeInfo];
         }
     }
@@ -451,6 +453,19 @@
     
     return array;
 }
+- (IBAction)buttonPoiPressed:(id)sender {
+
+    MCSService * service = [[MCSService alloc] init];
+    self.selectedPoi.status = @"1";
+    [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
+        if (success == true) {
+            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Ha habido algun problema con la conexion" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+            alert.show;
+        }
+    }];
+}
 
 -(NSArray *)sortDistances: (NSDictionary *)dict{
     NSArray *sortedKeys = [[dict allKeys] sortedArrayUsingSelector: @selector(compare:)];
@@ -460,6 +475,12 @@
     
     
     return sortedValues;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    InfoScreenViewController *vC = [segue destinationViewController];
+    vC.officeDoneList = self.offices;
+    
 }
 
 @end
