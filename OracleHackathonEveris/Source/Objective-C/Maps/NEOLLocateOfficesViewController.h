@@ -14,8 +14,9 @@
 #define kUserAnnotationViewIdentifier @"NEOLUserIdentifier"
 
 #define kMadridCenter CLLocationCoordinate2DMake(40.416944, -3.703611)
-
-#define kInitZoomLevel 5
+#define KLatitudMadrid 40.416944
+#define KLongitudMadrid -3.703611
+#define kInitZoomLevel 10
 #define kSearchZoomLevel 13
 #define kMinimumSearchLength 3
 

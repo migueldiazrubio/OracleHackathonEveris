@@ -58,39 +58,20 @@
     }
     [self.locationManager startUpdatingLocation];
     
-//    if (![CLLocationManager locationServicesEnabled]) {
-//        
-//        [self initializeMapViewCenteringInCoordinate:kMadridCenter];
-//    }
+    if (![CLLocationManager locationServicesEnabled]) {
+        
+        [self initializeMapViewCenteringInCoordinate:kMadridCenter];
+    }
     
     [self.buttonHowToArrive setExclusiveTouch:YES];
     [self.buttonCenter setExclusiveTouch:YES];
+    
+    [self performLocateOfficesRequest];
 
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
-    self.ceo= [[CLGeocoder alloc]init];
-    [self.locationManager requestWhenInUseAuthorization];
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [self.locationManager requestWhenInUseAuthorization];
-    }
-    CLLocationCoordinate2D coordinate;
-    
-    coordinate.latitude=self.locationManager.location.coordinate.latitude;
-    coordinate.longitude=self.locationManager.location.coordinate.longitude;
-    
-    NEOLOffice *myPosition = [[NEOLOffice alloc] init];
-    myPosition.latitude = [NSString stringWithFormat:@"%f",coordinate.latitude];
-    myPosition.longitude =[NSString stringWithFormat:@"%f",coordinate.longitude];
- 
-    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:0];
-    [mutableArray addObject:myPosition];
-    [mutableArray addObjectsFromArray:self.offices];
-    
-    self.offices = nil;
-    self.offices = [[NSArray alloc] initWithArray:mutableArray];
     
 }
 
@@ -103,7 +84,6 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    //This line is to kill all the connections that can be in the stack
 }
 
 #pragma mark - MapView Utils
@@ -160,11 +140,40 @@
 - (void)performLocateOfficesRequest {
     
     //self.offices = [NEOLMockRequestManager mockLocateOfficesRequest];
-    [self sortedArrayForDistance:self.offices];
+    
+    
+    self.ceo= [[CLGeocoder alloc]init];
+    [self.locationManager requestWhenInUseAuthorization];
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    CLLocationCoordinate2D coordinate;
+    
+    coordinate.latitude=self.locationManager.location.coordinate.latitude;
+    coordinate.longitude=self.locationManager.location.coordinate.longitude;
+    
+    NEOLOffice *myPosition = [[NEOLOffice alloc] init];
+    //    myPosition.latitude = [NSString stringWithFormat:@"%f",coordinate.latitude];
+    //    myPosition.longitude =[NSString stringWithFormat:@"%f",coordinate.longitude];
+    
+    //TODO conseguir obtener correctamente mi posición
+    myPosition.latitude = [NSString stringWithFormat:@"%f",KLatitudMadrid];
+    myPosition.longitude =[NSString stringWithFormat:@"%f",KLongitudMadrid];
+    
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:0];
+    [mutableArray addObject:myPosition];
+    [mutableArray addObjectsFromArray:self.offices];
+    
+    self.offices = nil;
+    self.offices = [[NSArray alloc] initWithArray:mutableArray];
+    
+    self.offices = [self sortedArrayForDistance:self.offices];
     
     if (self.offices.count >0){
         [self updateOffices];
         [self drawLine];
+        
+        
     }
 }
 
@@ -201,33 +210,33 @@
 
 #pragma mark - Open External Maps Applications
 
-- (void)openGoogleMapsAndShowHowToArrive {
-    NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&saddr=%f,%f&directionsmode=walking,driving,transit,bicycling",
-                                       self.lastKnownLocation.coordinate.latitude,
-                                       self.lastKnownLocation.coordinate.longitude,
-                                       annotationOffice.coordinate.latitude,
-                                       annotationOffice.coordinate.longitude]];
-    [[UIApplication sharedApplication] openURL:url];
-}
-
-- (void)openMapsAndShowHowToArrive {
-    if (self.mapView.selectedAnnotations.count>0){
-        // Origin
-        MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
-        
-        // Destination
-        NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
-        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:annotationOffice.coordinate addressDictionary:nil];
-        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-        [mapItem setName:annotationOffice.office.name];
-        
-        // Options
-        NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};
-        [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem]
-                       launchOptions:launchOptions];
-    }
-}
+//- (void)openGoogleMapsAndShowHowToArrive {
+//    NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&saddr=%f,%f&directionsmode=walking,driving,transit,bicycling",
+//                                       self.lastKnownLocation.coordinate.latitude,
+//                                       self.lastKnownLocation.coordinate.longitude,
+//                                       annotationOffice.coordinate.latitude,
+//                                       annotationOffice.coordinate.longitude]];
+//    [[UIApplication sharedApplication] openURL:url];
+//}
+//
+//- (void)openMapsAndShowHowToArrive {
+//    if (self.mapView.selectedAnnotations.count>0){
+//        // Origin
+//        MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
+//        
+//        // Destination
+//        NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
+//        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:annotationOffice.coordinate addressDictionary:nil];
+//        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+//        [mapItem setName:annotationOffice.office.name];
+//        
+//        // Options
+//        NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};
+//        [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem]
+//                       launchOptions:launchOptions];
+//    }
+//}
 
 
 
@@ -235,40 +244,40 @@
 
 - (IBAction)buttonCenterTouchUpInside:(id)sender {
     if ([CLLocationManager locationServicesEnabled]) {
-        [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:5 animated:YES];
+        [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:10 animated:YES];
     } else {
        // [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"ALERT", nil) andMessage:NSLocalizedString(@"MAP_ACTIVATE_LOCALIZATION", nil)];
     }
 }
 
 - (IBAction)buttonHowToArriveTouchUpInside:(id)sender {
-    if ([CLLocationManager locationServicesEnabled] && self.lastKnownLocation) {
+   // if ([CLLocationManager locationServicesEnabled] && self.lastKnownLocation) {
       
         
-        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
-            if ([self conformsToProtocol:@protocol(NEOLLocateOfficesViewControllerDetailOfficeViewProtocol)]) {
-                id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
-                (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
-                [locateOfficesViewController showMapsApplicationsChoice];
-            }
-        } else {
-            [self openMapsAndShowHowToArrive];
-        }
-    } else {
-       // [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"ALERT", nil) andMessage:NSLocalizedString(@"MAP_ACTIVATE_LOCALIZATION", nil)];
-    }
+//        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
+//            if ([self conformsToProtocol:@protocol(NEOLLocateOfficesViewControllerDetailOfficeViewProtocol)]) {
+//                id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
+//                (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
+//                [locateOfficesViewController showMapsApplicationsChoice];
+//            }
+//        } else {
+//            [self openMapsAndShowHowToArrive];
+//        }
+//    } else {
+//       // [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"ALERT", nil) andMessage:NSLocalizedString(@"MAP_ACTIVATE_LOCALIZATION", nil)];
+//    }
 }
 
 
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
-        [self openMapsAndShowHowToArrive];
-    } else if (buttonIndex == 1) {
-        [self openGoogleMapsAndShowHowToArrive];
-    }
-}
+//#pragma mark - UIActionSheetDelegate
+//
+//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+//    if (buttonIndex == 0) {
+//        [self openMapsAndShowHowToArrive];
+//    } else if (buttonIndex == 1) {
+//        [self openGoogleMapsAndShowHowToArrive];
+//    }
+//}
 
 
 #pragma mark - CLLocationManagerDelegate
@@ -287,8 +296,6 @@
 
 
 #pragma mark - MKMapKitDelegate
-
-
 
 - (void)mapViewWillStartLocatingUser:(MKMapView *)mapView {
     // Check authorization status (with class method)
@@ -353,7 +360,7 @@
         self.radius = [self radiusFromCoordinateRegion];
         
         // Search for offices
-        [self performLocateOfficesRequest];
+       // [self performLocateOfficesRequest];
     }
 }
 
@@ -409,23 +416,54 @@
 
 
 - (NSArray *)sortedArrayForDistance: (NSArray *)array{
-//    NSMutableArray *arrayAux = [[NSMutableArray alloc] initWithArray:array];
-//    NSMutableArray *sortedArray = [[NSMutableArray alloc] initWithCapacity:0];
-//    
-//    [sortedArray addObject:arrayAux[0]];
-//    [arrayAux removeObjectAtIndex:0];
-//    
-//  
-//    for (int i = 1 ; i< array.count; i++) {
-//            CLLocation *locA = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[array objectAtIndex:i] latitude] doubleValue] longitude:[[(NEOLOffice *)[array objectAtIndex:i] longitude] doubleValue]];
-//        
-//            CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[array objectAtIndex:i +1] latitude] doubleValue] longitude:[[(NEOLOffice *)[array objectAtIndex:i +1] longitude] doubleValue]];
-//            CLLocationDistance distance = [locA distanceFromLocation:locB];
-//        
-//    }
-
+        NSMutableArray *arrayAux = [[NSMutableArray alloc] initWithArray:array];
+        NSMutableArray *sortedArray = [[NSMutableArray alloc] initWithCapacity:0];
+    NSMutableDictionary *dictionaryOfDistances = [[NSMutableDictionary alloc] init];
+    
+        [sortedArray addObject:arrayAux[0]];
+        [arrayAux removeObjectAtIndex:0];
+    
+        NEOLOffice *current = [[NEOLOffice alloc] init];
+        current = [sortedArray objectAtIndex:0];
+        CLLocation *locA = [[CLLocation alloc] initWithLatitude:[[current latitude] doubleValue] longitude:[[current longitude] doubleValue]];
+    
+        CLLocationDistance distanceMinor = 999999999;
+        for (int i = 0 ; i< arrayAux.count; i++) {
+    
+            //[sortedArray addObject:arrayAux[i]];
+    
+    
+                CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[arrayAux objectAtIndex:i] latitude] doubleValue] longitude:[[(NEOLOffice *)[arrayAux objectAtIndex:i] longitude] doubleValue]];
+    
+                CLLocationDistance distance = [locA distanceFromLocation:locB];
+    
+//            if (distanceMinor >distance) {
+//                distanceMinor = distance;
+//                
+//                [sortedArray addObject:arrayAux[i]];
+//            }
+    
+//            current = [sortedArray objectAtIndex:i];
+//            [arrayAux removeObjectAtIndex:i];
+            
+            [dictionaryOfDistances setObject:arrayAux[i] forKey:[NSNumber numberWithDouble: distance]];
+           
+            
+        }
+     NSArray *sorted = [self sortDistances:dictionaryOfDistances];
+    
     
     return array;
+}
+
+-(NSArray *)sortDistances: (NSDictionary *)dict{
+    NSArray *sortedKeys = [[dict allKeys] sortedArrayUsingSelector: @selector(compare:)];
+    NSMutableArray *sortedValues = [NSMutableArray array];
+    for (NSString *key in sortedKeys)
+        [sortedValues addObject: [dict objectForKey: key]];
+    
+    
+    return sortedValues;
 }
 
 @end
