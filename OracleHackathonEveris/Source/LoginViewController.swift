@@ -13,7 +13,7 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
     @IBOutlet weak var passTextfield: JJMaterialTextfield!
     @IBOutlet weak var userTextField: JJMaterialTextfield!
     @IBOutlet weak var buttonLogin: UIButton!
-    
+    var officeList : [Poi] = []
     var mask:UIView?;
     
     override func viewDidLoad() {
@@ -47,8 +47,16 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
     }
  */
      @IBAction private func buttonLoginPressed(_ sender: Any) {
+        let service : MCSService! = MCSService()
+        service.findAll(completion: { (points) in
+            if (points?.count)! > 0{
+                self.officeList = points!
+            }else{
+                self.officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [Poi]
+            }
+            self.performSegue(withIdentifier: "showSegueTable", sender: self)
+        })
          ///authenticate(anonymously: false);
-        //self.performSegue(withIdentifier: "segueToTable", sender: self)
      }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,6 +126,11 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
             mask?.isHidden = true;
             self.view.willRemoveSubview(mask!)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vC = segue.destination as! TableSelectViewController
+        vC.officeList = self.officeList 
     }
 
 }

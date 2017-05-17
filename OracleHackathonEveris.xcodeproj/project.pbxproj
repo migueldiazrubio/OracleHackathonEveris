@@ -12,6 +12,7 @@
 		279FE4561EC5B7C800781CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4541EC5B7C800781CF4 /* Main.storyboard */; };
 		279FE4581EC5B7C800781CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4571EC5B7C800781CF4 /* Assets.xcassets */; };
 		279FE45B1EC5B7C800781CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279FE4591EC5B7C800781CF4 /* LaunchScreen.storyboard */; };
+		2F2CE738B7690707C4B6D8DA /* Pods_OracleHackathonEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */; };
 		B1656B961ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */; };
 		B1656B971ECB038F00C774C2 /* NEOLAnnotationOfficeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */; };
 		B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B1656B851ECB038F00C774C2 /* NEOLAddress.m */; };
@@ -40,6 +41,8 @@
 		C20E92321ECB46FB00266DE8 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E922F1ECB46FB00266DE8 /* SwiftyGifManager.swift */; };
 		C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */; };
 		C20E92341ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */; };
+		C2AFEA581ECB5089001D426E /* MCSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AFEA561ECB5089001D426E /* MCSService.swift */; };
+		C2AFEA591ECB5089001D426E /* Poi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AFEA571ECB5089001D426E /* Poi.swift */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -54,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OracleHackathonEveris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		279FE44D1EC5B7C800781CF4 /* OracleHackathonEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OracleHackathonEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279FE4501EC5B7C800781CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279FE4521EC5B7C800781CF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 		B1656BA31ECB0F7100C774C2 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		B1656BA41ECB0F7100C774C2 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		B1656BA71ECB116B00C774C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.debug.xcconfig"; sourceTree = "<group>"; };
 		C20E91FD1EC5D74700266DE8 /* InfoScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoScreenViewController.swift; path = Source/InfoScreenViewController.swift; sourceTree = "<group>"; };
 		C20E92021EC5D79700266DE8 /* TableSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSelectViewController.swift; path = Source/TableSelectViewController.swift; sourceTree = "<group>"; };
 		C20E92041EC5D7AE00266DE8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Source/LoginViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +109,8 @@
 		C20E922F1ECB46FB00266DE8 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = Source/SwiftyGifManager.swift; sourceTree = "<group>"; };
 		C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "Source/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "Source/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		C2AFEA561ECB5089001D426E /* MCSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSService.swift; path = Source/MCSService.swift; sourceTree = "<group>"; };
+		C2AFEA571ECB5089001D426E /* Poi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Poi.swift; path = Source/Poi.swift; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +224,7 @@
 		C2F2B2871EC5CC2100ACE7CB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
 		C2F2B2881EC5CC2100ACE7CB /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
 		C2F2B2891EC5CC2100ACE7CB /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/OMLocalizable.strings; sourceTree = "<group>"; };
+		C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OracleHackathonEveris.release.xcconfig"; path = "Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +240,7 @@
 				C2F2B2931EC5CC2100ACE7CB /* libIDMMobileSDKv2Library.a in Frameworks */,
 				C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */,
 				C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */,
+				2F2CE738B7690707C4B6D8DA /* Pods_OracleHackathonEveris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				279FE44E1EC5B7C800781CF4 /* Products */,
 				C20E92111ECA354200266DE8 /* OracleHackathonEveris-Bridging-Header.h */,
 				B1656BA61ECB116B00C774C2 /* Frameworks */,
+				FEE0BFD13CD1E7C758A9B9CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +279,8 @@
 				C20E91FA1EC5D6E300266DE8 /* TableSelect */,
 				C20E91F81EC5D6CF00266DE8 /* Login */,
 				279FE4501EC5B7C800781CF4 /* AppDelegate.swift */,
+				C2AFEA561ECB5089001D426E /* MCSService.swift */,
+				C2AFEA571ECB5089001D426E /* Poi.swift */,
 				279FE4521EC5B7C800781CF4 /* ViewController.swift */,
 				279FE4541EC5B7C800781CF4 /* Main.storyboard */,
 				279FE4571EC5B7C800781CF4 /* Assets.xcassets */,
@@ -321,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				B1656BA71ECB116B00C774C2 /* MapKit.framework */,
+				0FCDA7110085A1B305375B0C /* Pods_OracleHackathonEveris.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -616,6 +629,15 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		FEE0BFD13CD1E7C758A9B9CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */,
+				C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -623,9 +645,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279FE45F1EC5B7C800781CF4 /* Build configuration list for PBXNativeTarget "OracleHackathonEveris" */;
 			buildPhases = (
+				056D02D8AA2E8EBF4775F48F /* [CP] Check Pods Manifest.lock */,
 				279FE4491EC5B7C800781CF4 /* Sources */,
 				279FE44A1EC5B7C800781CF4 /* Frameworks */,
 				279FE44B1EC5B7C800781CF4 /* Resources */,
+				C4B2ECEBF53A45B814E9ABC9 /* [CP] Embed Pods Frameworks */,
+				82345E98133E8DBF1FF272D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -729,12 +754,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		056D02D8AA2E8EBF4775F48F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82345E98133E8DBF1FF272D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B2ECEBF53A45B814E9ABC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OracleHackathonEveris/Pods-OracleHackathonEveris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		279FE4491EC5B7C800781CF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B1656B9E1ECB038F00C774C2 /* NEOLAnnotationOfficeModel.m in Sources */,
+				C2AFEA581ECB5089001D426E /* MCSService.swift in Sources */,
 				C20E92051EC5D7AE00266DE8 /* LoginViewController.swift in Sources */,
 				C20E92251ECB19D900266DE8 /* CustomTableViewCell.swift in Sources */,
 				B1656B9C1ECB038F00C774C2 /* GGeocodeResponse.m in Sources */,
@@ -745,6 +819,7 @@
 				B1656B9D1ECB038F00C774C2 /* LatLngPoint.m in Sources */,
 				C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */,
 				C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */,
+				C2AFEA591ECB5089001D426E /* Poi.swift in Sources */,
 				B1656B991ECB038F00C774C2 /* NEOLMockRequestManager.m in Sources */,
 				B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */,
 				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
@@ -915,6 +990,7 @@
 		};
 		279FE4601EC5B7C800781CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1820F98B36703D25237E03E /* Pods-OracleHackathonEveris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -938,6 +1014,7 @@
 		};
 		279FE4611EC5B7C800781CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92280A501921C05273BDD7B /* Pods-OracleHackathonEveris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
