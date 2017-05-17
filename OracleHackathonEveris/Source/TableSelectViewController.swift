@@ -20,7 +20,7 @@ class TableSelectViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.title = "Encargos"
+        self.title = "Destinos entrega"
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName :"TableViewHeaderCustom", bundle: nil), forCellReuseIdentifier: "TableViewHeaderCustom")
     

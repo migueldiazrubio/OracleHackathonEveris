@@ -400,8 +400,8 @@
         if(nil == self.routeLineView)
         {
             self.routeLineView = [[MKPolylineRenderer alloc] initWithPolyline:self.routeLine] ;
-            self.routeLineView.fillColor = [UIColor greenColor];
-            self.routeLineView.strokeColor = [UIColor greenColor];
+            self.routeLineView.fillColor = [UIColor colorWithHexString:@"98b433"];
+            self.routeLineView.strokeColor = [UIColor colorWithHexString:@"333639"];
             self.routeLineView.lineWidth = 3;
             
         }
