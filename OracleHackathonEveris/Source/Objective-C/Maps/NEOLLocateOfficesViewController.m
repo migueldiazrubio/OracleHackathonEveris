@@ -89,8 +89,8 @@
 #pragma mark - MapView Utils
 
 - (void)initializeMapViewCenteringInCoordinate:(CLLocationCoordinate2D)coordinate {
-    [self.mapView setCenterCoordinate:coordinate zoomLevel:kInitZoomLevel animated:YES];
-    [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:10 animated:YES];
+    //[self.mapView setCenterCoordinate:coordinate zoomLevel:kInitZoomLevel animated:YES];
+    [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:13 animated:YES];
     self.mapView.showsUserLocation = YES;
 }
 
@@ -217,7 +217,7 @@
 
 - (IBAction)buttonCenterTouchUpInside:(id)sender {
     if ([CLLocationManager locationServicesEnabled]) {
-        [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:10 animated:YES];
+        [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:13 animated:YES];
     } else {
        // [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"ALERT", nil) andMessage:NSLocalizedString(@"MAP_ACTIVATE_LOCALIZATION", nil)];
     }
@@ -323,7 +323,7 @@
     {
         
         // Apply the zoom level and radius to the map view
-        self.zoomLevel = [self.mapView getZoomLevel];
+        self.zoomLevel = 20;
         self.radius = [self radiusFromCoordinateRegion];
         
         // Search for offices
