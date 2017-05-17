@@ -16,7 +16,7 @@ open class SwiftyGifManager {
     fileprivate var totalGifSize: Int
     fileprivate var memoryLimit: Int
     open var  haveCache: Bool
-    
+        
     /**
      Initialize a manager
      - Parameter memoryLimit: The number of Mb max for this manager

@@ -14,6 +14,5 @@
 @interface NEOLMockRequestManager : NSObject
 
 + (NEOLUser *)mockUserInfoRequest;
-+ (NSArray *)mockLocateOfficesRequest;
 
 @end

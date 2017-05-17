@@ -51,8 +51,6 @@ class LoginViewController: UIViewController, JJTextFieldDelegate , UITextFieldDe
         service.findAll(completion: { (points) in
             if (points?.count)! > 0{
                 self.officeList = points!
-            }else{
-                self.officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [Poi]
             }
             self.performSegue(withIdentifier: "showSegueTable", sender: self)
         })

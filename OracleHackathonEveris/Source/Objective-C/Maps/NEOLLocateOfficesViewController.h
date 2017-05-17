@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-
+#import "Poi.h"
 
 #define kOfficeAnnotationViewIdentifier @"NEOLOfficeIdentifier"
 #define kUserAnnotationViewIdentifier @"NEOLUserIdentifier"
@@ -19,8 +19,6 @@
 #define kInitZoomLevel 10
 #define kSearchZoomLevel 13
 #define kMinimumSearchLength 3
-
-@class Poi;
 
 @protocol NEOLLocateOfficesViewControllerDetailOfficeViewProtocol <NSObject>
 - (void)setViewOfficeInfoWithOffice:(Poi *)office;

@@ -24,7 +24,6 @@ class TableSelectViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName :"TableViewHeaderCustom", bundle: nil), forCellReuseIdentifier: "TableViewHeaderCustom")
     
-        //officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [Poi]
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }

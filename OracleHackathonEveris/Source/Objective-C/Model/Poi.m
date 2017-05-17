@@ -10,7 +10,7 @@
 
 @implementation Poi
 
--(void)initWithIdentifier:(NSInteger) identificator latitude:(double)latitude longitude: (double) longitude status: (NSString*) status requestTimestamp: (NSString*) requestTimestamp deliveryTimestamp: (NSString*)deliveryTimestamp  address: (NSString*) address deliveredBy: (NSString*) deliveredBy{
+-(void)initWithIdentifier:(NSString*) identificator latitude:(NSString*)latitude longitude: (NSString*) longitude status: (NSString*) status requestTimestamp: (NSString*) requestTimestamp deliveryTimestamp: (NSString*)deliveryTimestamp  address: (NSString*) address deliveredBy: (NSString*) deliveredBy{
     self.identificator = identificator;
     self.latitude = latitude;
     self.longitude = longitude;

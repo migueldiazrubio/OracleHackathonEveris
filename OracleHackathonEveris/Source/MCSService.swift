@@ -32,7 +32,17 @@ final class MCSService {
                 let data = JSON(response.result.value!)["pointofinterest"].arrayValue
                 
                 for point in data {
-                    let poi = Poi(identificator: point["id"].intValue, latitude: point["latitude"].string, longitude: point["longitude"].string, status: point["status"].string, requestTimestamp: point["requestTimestamp"].string, deliveryTimestamp: point["deliveryTimestamp"].string, address: point["address"].string, deliveredBy: point["deliveredBy"].string)
+                    
+                    let poi = Poi()
+                    poi.identificator = point["id"].string
+                    poi.latitude = point["latitude"].string
+                    poi.longitude = point["longitude"].string
+                    poi.status = point["status"].string
+                    poi.requestTimestamp = point["requestTimestamp"].string
+                    poi.deliveryTimestamp = point["deliveryTimestamp"].string
+                    poi.address = point["address"].string
+                    poi.deliveredBy = point["deliveredBy"].string
+                    
                     points.append(poi)
                 }
                 

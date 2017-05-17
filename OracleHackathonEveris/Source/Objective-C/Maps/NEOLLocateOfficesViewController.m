@@ -16,7 +16,6 @@
 #import "MKMapView+ZoomLevel.h"
 #import "GGeocodeResponse.h"
 #import "LatLngPoint.h"
-#import "NEOLOffice.h"
 
 
 @interface NEOLLocateOfficesViewController () <CLLocationManagerDelegate>
@@ -139,9 +138,6 @@
 
 - (void)performLocateOfficesRequest {
     
-    //self.offices = [NEOLMockRequestManager mockLocateOfficesRequest];
-    
-    
     self.ceo= [[CLGeocoder alloc]init];
     [self.locationManager requestWhenInUseAuthorization];
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
@@ -152,7 +148,7 @@
     coordinate.latitude=self.locationManager.location.coordinate.latitude;
     coordinate.longitude=self.locationManager.location.coordinate.longitude;
     
-    NEOLOffice *myPosition = [[NEOLOffice alloc] init];
+    Poi *myPosition = [[Poi alloc] init];
     //    myPosition.latitude = [NSString stringWithFormat:@"%f",coordinate.latitude];
     //    myPosition.longitude =[NSString stringWithFormat:@"%f",coordinate.longitude];
     
@@ -382,7 +378,7 @@
         CLLocationCoordinate2D coordinateArray[self.offices.count];
         
         for (int i = 0; i< self.offices.count; i++) {
-            coordinateArray[i] = CLLocationCoordinate2DMake([[(NEOLOffice *)self.offices[i] latitude] doubleValue], [[(NEOLOffice *)self.offices[i] longitude] doubleValue]);
+            coordinateArray[i] = CLLocationCoordinate2DMake([[(Poi *)self.offices[i] latitude] doubleValue], [[(Poi *)self.offices[i] longitude] doubleValue]);
         }
         
         self.routeLine = [MKPolyline polylineWithCoordinates:coordinateArray count:self.offices.count];
@@ -423,7 +419,7 @@
         [sortedArray addObject:arrayAux[0]];
         [arrayAux removeObjectAtIndex:0];
     
-        NEOLOffice *current = [[NEOLOffice alloc] init];
+        Poi *current = [[Poi alloc] init];
         current = [sortedArray objectAtIndex:0];
         CLLocation *locA = [[CLLocation alloc] initWithLatitude:[[current latitude] doubleValue] longitude:[[current longitude] doubleValue]];
     
@@ -433,7 +429,7 @@
             //[sortedArray addObject:arrayAux[i]];
     
     
-                CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(NEOLOffice *)[arrayAux objectAtIndex:i] latitude] doubleValue] longitude:[[(NEOLOffice *)[arrayAux objectAtIndex:i] longitude] doubleValue]];
+                CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(Poi *)[arrayAux objectAtIndex:i] latitude] doubleValue] longitude:[[(Poi *)[arrayAux objectAtIndex:i] longitude] doubleValue]];
     
                 CLLocationDistance distance = [locA distanceFromLocation:locB];
     

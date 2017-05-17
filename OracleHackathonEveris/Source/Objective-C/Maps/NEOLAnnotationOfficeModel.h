@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
-#import "NEOLOffice.h"
-@class Poi;
+
+#import "Poi.h"
 
 @interface NEOLAnnotationOfficeModel : NSObject <MKAnnotation>
 

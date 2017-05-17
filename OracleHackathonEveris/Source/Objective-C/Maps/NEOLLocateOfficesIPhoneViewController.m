@@ -17,8 +17,6 @@
 #import "GGeocodeResponse.h"
 #import "LatLngPoint.h"
 
-#import "NEOLOffice.h"
-
 
 #define kPOITypeOffice  @"OFICINA"
 #define kPOITypeGarage  @"PDS"
