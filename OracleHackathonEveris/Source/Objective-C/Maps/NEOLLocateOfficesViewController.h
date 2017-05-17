@@ -55,7 +55,4 @@
 - (IBAction)buttonCenterTouchUpInside:(id)sender;
 - (IBAction)buttonHowToArriveTouchUpInside:(id)sender;
 
-- (void)openGoogleMapsAndShowHowToArrive;
-- (void)openMapsAndShowHowToArrive;
-
 @end

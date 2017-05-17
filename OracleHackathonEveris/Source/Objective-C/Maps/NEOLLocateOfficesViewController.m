@@ -193,6 +193,14 @@
             [locateOfficesViewController setViewOfficeInfoWithOffice:office];
             self.selectedPoi = office;
             [locateOfficesViewController animateToShowViewOfficeInfo];
+            
+            MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
+            point.coordinate = CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue]);
+             //[self animateAnnotation:point];
+            
+//            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue])];
+            
+            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake(33,33)];
         }
     }
 }
@@ -208,36 +216,6 @@
 
 #pragma mark - Open External Maps Applications
 
-//- (void)openGoogleMapsAndShowHowToArrive {
-//    NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&saddr=%f,%f&directionsmode=walking,driving,transit,bicycling",
-//                                       self.lastKnownLocation.coordinate.latitude,
-//                                       self.lastKnownLocation.coordinate.longitude,
-//                                       annotationOffice.coordinate.latitude,
-//                                       annotationOffice.coordinate.longitude]];
-//    [[UIApplication sharedApplication] openURL:url];
-//}
-//
-//- (void)openMapsAndShowHowToArrive {
-//    if (self.mapView.selectedAnnotations.count>0){
-//        // Origin
-//        MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
-//        
-//        // Destination
-//        NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
-//        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:annotationOffice.coordinate addressDictionary:nil];
-//        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-//        [mapItem setName:annotationOffice.office.name];
-//        
-//        // Options
-//        NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};
-//        [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem]
-//                       launchOptions:launchOptions];
-//    }
-//}
-
-
-
 #pragma mark - Actions
 
 - (IBAction)buttonCenterTouchUpInside:(id)sender {
@@ -249,21 +227,11 @@
 }
 
 - (IBAction)buttonHowToArriveTouchUpInside:(id)sender {
-   // if ([CLLocationManager locationServicesEnabled] && self.lastKnownLocation) {
-      
-        
-//        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
-//            if ([self conformsToProtocol:@protocol(NEOLLocateOfficesViewControllerDetailOfficeViewProtocol)]) {
-//                id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
-//                (id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol>)self;
-//                [locateOfficesViewController showMapsApplicationsChoice];
-//            }
-//        } else {
-//            [self openMapsAndShowHowToArrive];
-//        }
-//    } else {
-//       // [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"ALERT", nil) andMessage:NSLocalizedString(@"MAP_ACTIVATE_LOCALIZATION", nil)];
-//    }
+    
+//    MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
+//    [self animateAnnotation:point];
+    
+    
 }
 
 
@@ -339,6 +307,7 @@
     if (![view isKindOfClass:[MKUserLocation class]]) {
         
         [self showOfficeDetailWithAnnotationView:view];
+        
     }
 }
 
@@ -416,42 +385,32 @@
 - (NSArray *)sortedArrayForDistance: (NSArray *)array{
         NSMutableArray *arrayAux = [[NSMutableArray alloc] initWithArray:array];
         NSMutableArray *sortedArray = [[NSMutableArray alloc] initWithCapacity:0];
-    NSMutableDictionary *dictionaryOfDistances = [[NSMutableDictionary alloc] init];
+        NSMutableDictionary *dictionaryOfDistances = [[NSMutableDictionary alloc] init];
     
         [sortedArray addObject:arrayAux[0]];
         [arrayAux removeObjectAtIndex:0];
-    
+    while (sortedArray.count != array.count) {
         Poi *current = [[Poi alloc] init];
-        current = [sortedArray objectAtIndex:0];
+        current = [sortedArray lastObject];
         CLLocation *locA = [[CLLocation alloc] initWithLatitude:[[current latitude] doubleValue] longitude:[[current longitude] doubleValue]];
-    
-        CLLocationDistance distanceMinor = 999999999;
+        
         for (int i = 0 ; i< arrayAux.count; i++) {
-    
-            //[sortedArray addObject:arrayAux[i]];
-    
-    
-                CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(Poi *)[arrayAux objectAtIndex:i] latitude] doubleValue] longitude:[[(Poi *)[arrayAux objectAtIndex:i] longitude] doubleValue]];
-    
-                CLLocationDistance distance = [locA distanceFromLocation:locB];
-    
-//            if (distanceMinor >distance) {
-//                distanceMinor = distance;
-//                
-//                [sortedArray addObject:arrayAux[i]];
-//            }
-    
-//            current = [sortedArray objectAtIndex:i];
-//            [arrayAux removeObjectAtIndex:i];
+            
+            CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[(Poi *)[arrayAux objectAtIndex:i] latitude] doubleValue] longitude:[[(Poi *)[arrayAux objectAtIndex:i] longitude] doubleValue]];
+            
+            CLLocationDistance distance = [locA distanceFromLocation:locB];
             
             [dictionaryOfDistances setObject:arrayAux[i] forKey:[NSNumber numberWithDouble: distance]];
-           
             
         }
-     NSArray *sorted = [self sortDistances:dictionaryOfDistances];
+        
+        [sortedArray addObject:[self sortDistances:dictionaryOfDistances]];
+        [arrayAux removeObject:[self sortDistances:dictionaryOfDistances]];
+    }
     
     
-    return array;
+    
+    return sortedArray;
 }
 - (IBAction)buttonPoiPressed:(id)sender {
 
@@ -466,14 +425,34 @@
     }];
 }
 
--(NSArray *)sortDistances: (NSDictionary *)dict{
+-(Poi *)sortDistances: (NSDictionary *)dict{
     NSArray *sortedKeys = [[dict allKeys] sortedArrayUsingSelector: @selector(compare:)];
     NSMutableArray *sortedValues = [NSMutableArray array];
     for (NSString *key in sortedKeys)
         [sortedValues addObject: [dict objectForKey: key]];
     
     
-    return sortedValues;
+    return [sortedValues objectAtIndex:0];
+}
+
+
+-(void) animateAnnotation:(MKPointAnnotation*)annotation{
+    
+    CLLocationCoordinate2D newCordinates;
+    //for(int i=0;i<self.offices.count;i++){
+        newCordinates=CLLocationCoordinate2DMake([[(Poi *)self.offices[1] latitude] doubleValue], [[(Poi *)self.offices[1] longitude] doubleValue]);
+        [UIView
+         animateWithDuration:2.0
+         delay:0.0
+         options:UIViewAnimationOptionCurveEaseInOut
+         animations:^{
+             annotation.coordinate = newCordinates;
+         }
+         completion:nil];
+    
+    [self.mapView reloadInputViews];
+    [self.mapView setNeedsDisplay];
+    //}
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
