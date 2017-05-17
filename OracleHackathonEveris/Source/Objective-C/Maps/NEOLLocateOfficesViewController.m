@@ -419,10 +419,9 @@
     self.selectedPoi.status = @"1";
     [service modifyPoiWithPoi:self.selectedPoi completion:^(BOOL success)  {
         if (success == true) {
-            [self performSegueWithIdentifier:@"showFinishSegue" sender:self];
+            //[self performSegueWithIdentifier:@"showFinishSegue" sender:self];
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Ha habido algun problema con la conexion" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
-            alert.show;
+            NSLog(@"Error put");
         }
     }];
 }

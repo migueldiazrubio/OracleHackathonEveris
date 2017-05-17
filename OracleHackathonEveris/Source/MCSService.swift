@@ -34,7 +34,11 @@ final class MCSService : NSObject {
                 for point in data {
                     
                     let poi = Poi()
-                    poi.identificator = point["id"].string
+                    if let id = point["id"].int {
+                        poi.identificator = "\(id)"
+                    }
+                    
+                    print("POINT ID: \(point["id"])")
                     poi.latitude = point["latitude"].string
                     poi.longitude = point["longitude"].string
                     poi.status = point["status"].string
