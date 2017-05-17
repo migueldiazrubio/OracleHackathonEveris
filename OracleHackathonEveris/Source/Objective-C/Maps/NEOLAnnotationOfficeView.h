@@ -12,4 +12,6 @@
 
 @interface NEOLAnnotationOfficeView : MKAnnotationView <MKAnnotation>
 
+
+-(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 @end

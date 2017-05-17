@@ -297,7 +297,6 @@
 				C20E92201ECB073A00266DE8 /* NEOLLocateOfficesViewController.h */,
 				C20E92211ECB073A00266DE8 /* NEOLLocateOfficesViewController.m */,
 				B1656B831ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m */,
-				B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */,
 				B1656B851ECB038F00C774C2 /* NEOLAddress.m */,
 				B1656B8E1ECB038F00C774C2 /* NEOLMockRequestManager.h */,
 				B1656B861ECB038F00C774C2 /* NEOLMockRequestManager.m */,
@@ -305,6 +304,7 @@
 				B1656B881ECB038F00C774C2 /* NEOLAddress.h */,
 				B1656B891ECB038F00C774C2 /* NEOLOffice.h */,
 				B1656B8A1ECB038F00C774C2 /* NEOLAnnotationOfficeView.h */,
+				B1656B841ECB038F00C774C2 /* NEOLAnnotationOfficeView.m */,
 				B1656B8B1ECB038F00C774C2 /* MKMapView+ZoomLevel.h */,
 				B1656B8C1ECB038F00C774C2 /* MKMapView+ZoomLevel.m */,
 				B1656B8D1ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.h */,
@@ -777,7 +777,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		82345E98133E8DBF1FF272D6 /* [CP] Copy Pods Resources */ = {
