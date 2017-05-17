@@ -19,8 +19,7 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gif = UIImage(gifName: "Gif")
-        gifImage.setGifImage(gif)
+        
         self.title = "Resumen"
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,14 +37,22 @@ class InfoScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
-        cell?.checkImage.isHidden = true
-        cell?.labelAddress.text = officeDoneList[indexPath.row].address
-        return cell!
+        if officeDoneList[indexPath.row].address != "" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
+            cell?.checkImage.isHidden = true
+            cell?.labelAddress.text = officeDoneList[indexPath.row].address
+            let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short)
+            cell?.labelTime.text = timestamp
+            cell?.labelTime.isHidden = false
+            return cell!
+        }
+        else {
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return officeDoneList.count
+        return officeDoneList.count - 1
     }
 
     /*

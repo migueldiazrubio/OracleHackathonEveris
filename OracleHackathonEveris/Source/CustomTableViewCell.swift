@@ -10,6 +10,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var checkImage: UIImageView!
     override func awakeFromNib() {
