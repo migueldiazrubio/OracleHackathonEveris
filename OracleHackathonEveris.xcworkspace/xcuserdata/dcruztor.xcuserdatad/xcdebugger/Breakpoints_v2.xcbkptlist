@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "405"
-            endingLineNumber = "405"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
             landmarkName = "-sortedArrayForDistance:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "-sortedArrayForDistance:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "-sortedArrayForDistance:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "427"
-            endingLineNumber = "427"
-            landmarkName = "-animateAnnotation:"
+            startingLineNumber = "428"
+            endingLineNumber = "428"
+            landmarkName = "-buttonPoiPressed:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "-buttonHowToArriveTouchUpInside:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,28 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714596.430961"
+            timestampString = "516715590.805405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "-showOfficeDetailWithAnnotationView:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OracleHackathonEveris/Source/Objective-C/Maps/NEOLLocateOfficesViewController.m"
-            timestampString = "516714606.247078"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
-            landmarkName = "-animateAnnotation:"
+            startingLineNumber = "436"
+            endingLineNumber = "436"
+            landmarkName = "-sortDistances:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
