@@ -121,7 +121,7 @@
 - (void)createOfficeAnnotations {
     NSMutableArray *annotations = [NSMutableArray array];
     NSMutableArray *response = (NSMutableArray *)self.offices;
-    NEOLOffice *office;
+    Poi *office;
     for (office in response) {
         [annotations addObject:[[NEOLAnnotationOfficeModel alloc] initWithOffice:office]];
     }
@@ -157,7 +157,7 @@
     NEOLAnnotationOfficeView *officeAnnotationView = (NEOLAnnotationOfficeView *)view;
     NEOLAnnotationOfficeModel *officeAnnotation = (NEOLAnnotationOfficeModel *) officeAnnotationView.annotation;
     if (![officeAnnotation isKindOfClass:[MKUserLocation class]]){
-        NEOLOffice *office = officeAnnotation.office;
+        Poi *office = officeAnnotation.office;
         
         if ([self conformsToProtocol:@protocol(NEOLLocateOfficesViewControllerDetailOfficeViewProtocol)]) {
             id<NEOLLocateOfficesViewControllerDetailOfficeViewProtocol> locateOfficesViewController =
@@ -198,7 +198,7 @@
         NEOLAnnotationOfficeModel *annotationOffice = self.mapView.selectedAnnotations[0];
         MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:annotationOffice.coordinate addressDictionary:nil];
         MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
-        [mapItem setName:annotationOffice.office.name];
+        [mapItem setName:annotationOffice.office.address];
         
         // Options
         NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeWalking};

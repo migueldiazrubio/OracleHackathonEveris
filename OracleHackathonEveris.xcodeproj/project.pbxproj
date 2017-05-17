@@ -42,7 +42,7 @@
 		C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */; };
 		C20E92341ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */; };
 		C2AFEA581ECB5089001D426E /* MCSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AFEA561ECB5089001D426E /* MCSService.swift */; };
-		C2AFEA591ECB5089001D426E /* Poi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AFEA571ECB5089001D426E /* Poi.swift */; };
+		C2AFEA5D1ECC3B48001D426E /* Poi.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AFEA5C1ECC3B48001D426E /* Poi.m */; };
 		C2F2B28A1EC5CC2100ACE7CB /* libOMCAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B2491EC5CC2100ACE7CB /* libOMCAnalytics.a */; };
 		C2F2B28B1EC5CC2100ACE7CB /* libOMCCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24A1EC5CC2100ACE7CB /* libOMCCore.a */; };
 		C2F2B28C1EC5CC2100ACE7CB /* libOMCLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2B24B1EC5CC2100ACE7CB /* libOMCLocation.a */; };
@@ -110,7 +110,8 @@
 		C20E92301ECB46FB00266DE8 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "Source/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C20E92311ECB46FB00266DE8 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "Source/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		C2AFEA561ECB5089001D426E /* MCSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCSService.swift; path = Source/MCSService.swift; sourceTree = "<group>"; };
-		C2AFEA571ECB5089001D426E /* Poi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Poi.swift; path = Source/Poi.swift; sourceTree = "<group>"; };
+		C2AFEA5B1ECC3B48001D426E /* Poi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Poi.h; path = "Source/Objective-C/Model/Poi.h"; sourceTree = "<group>"; };
+		C2AFEA5C1ECC3B48001D426E /* Poi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Poi.m; path = "Source/Objective-C/Model/Poi.m"; sourceTree = "<group>"; };
 		C2F2B20D1EC5CC2100ACE7CB /* OMCAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalytics.h; sourceTree = "<group>"; };
 		C2F2B20E1EC5CC2100ACE7CB /* OMCAnalyticsApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsApplicationDelegate.h; sourceTree = "<group>"; };
 		C2F2B20F1EC5CC2100ACE7CB /* OMCAnalyticsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMCAnalyticsDelegate.h; sourceTree = "<group>"; };
@@ -280,7 +281,6 @@
 				C20E91F81EC5D6CF00266DE8 /* Login */,
 				279FE4501EC5B7C800781CF4 /* AppDelegate.swift */,
 				C2AFEA561ECB5089001D426E /* MCSService.swift */,
-				C2AFEA571ECB5089001D426E /* Poi.swift */,
 				279FE4521EC5B7C800781CF4 /* ViewController.swift */,
 				279FE4541EC5B7C800781CF4 /* Main.storyboard */,
 				279FE4571EC5B7C800781CF4 /* Assets.xcassets */,
@@ -394,6 +394,7 @@
 		C20E921B1ECB002C00266DE8 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				C2AFEA5A1ECC3B1F001D426E /* Model */,
 				B1656BA21ECB0CDE00C774C2 /* User */,
 				B1656B801ECB023F00C774C2 /* Maps */,
 				C20E921C1ECB010F00266DE8 /* Color+Hex */,
@@ -422,6 +423,15 @@
 				C20E922C1ECB442100266DE8 /* Gif.gif */,
 			);
 			name = Gif;
+			sourceTree = "<group>";
+		};
+		C2AFEA5A1ECC3B1F001D426E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2AFEA5B1ECC3B48001D426E /* Poi.h */,
+				C2AFEA5C1ECC3B48001D426E /* Poi.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C2F2B2091EC5CC2100ACE7CB /* oracle_mobile_ios_sdk */ = {
@@ -819,7 +829,6 @@
 				B1656B9D1ECB038F00C774C2 /* LatLngPoint.m in Sources */,
 				C20E920A1ECA32EB00266DE8 /* MCSUserSettings.swift in Sources */,
 				C20E92331ECB46FB00266DE8 /* UIImage+SwiftyGif.swift in Sources */,
-				C2AFEA591ECB5089001D426E /* Poi.swift in Sources */,
 				B1656B991ECB038F00C774C2 /* NEOLMockRequestManager.m in Sources */,
 				B1656B981ECB038F00C774C2 /* NEOLAddress.m in Sources */,
 				C20E92031EC5D79700266DE8 /* TableSelectViewController.swift in Sources */,
@@ -831,6 +840,7 @@
 				B1656B961ECB038F00C774C2 /* NEOLLocateOfficesIPhoneViewController.m in Sources */,
 				C20E92221ECB073A00266DE8 /* NEOLLocateOfficesViewController.m in Sources */,
 				B1656BA11ECB049100C774C2 /* UIColor+HexColor.m in Sources */,
+				C2AFEA5D1ECC3B48001D426E /* Poi.m in Sources */,
 				C20E91FE1EC5D74700266DE8 /* InfoScreenViewController.swift in Sources */,
 				C20E92281ECB2C9400266DE8 /* TableViewHeaderCustom.swift in Sources */,
 				C20E92321ECB46FB00266DE8 /* SwiftyGifManager.swift in Sources */,

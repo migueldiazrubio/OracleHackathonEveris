@@ -51,19 +51,19 @@
 
 #pragma mark - NEOLLocateOfficesViewControllerDetailOfficeViewProtocol
 
-- (void)setViewOfficeInfoWithOffice:(NEOLOffice *)office {
-    if ([office.type isEqualToString:kPOITypeOffice]) {
+- (void)setViewOfficeInfoWithOffice:(Poi *)office {
+    if ([office.status isEqualToString:kPOITypeOffice]) {
         self.imageViewOfficeType.image = [UIImage imageNamed:@"offices_ico_building"];
         //self.viewOfficeType.backgroundColor = [UIColor colorWithHexString:@"338cce"];
         self.labelOfficeType.text = NSLocalizedString(@"OFFICE", nil);
-    } else if ([office.type isEqualToString:kPOITypeGarage]) {
+    } else if ([office.status isEqualToString:kPOITypeGarage]) {
         self.imageViewOfficeType.image = [UIImage imageNamed:@"offices_ico_garage"];
         //self.viewOfficeType.backgroundColor = [UIColor colorWithHexString:@"f88106"];
         self.labelOfficeType.text = NSLocalizedString(@"GARAGE", nil);
     }
     
-    self.labelOfficeTitle.text = office.name;
-    self.labelOfficeAddress.text = [office.physicalAddress description];
+    self.labelOfficeTitle.text = office.address;
+    self.labelOfficeAddress.text = [office.address description];
     
 }
 

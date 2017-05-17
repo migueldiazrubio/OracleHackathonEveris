@@ -32,7 +32,7 @@ final class MCSService {
                 let data = JSON(response.result.value!)["pointofinterest"].arrayValue
                 
                 for point in data {
-                    let poi = Poi(id: point["id"].int, latitude: point["latitude"].double, longitude: point["longitude"].double, status: point["status"].string, requestTimestamp: point["requestTimestamp"].string, deliveryTimestamp: point["deliveryTimestamp"].string, address: point["address"].string, deliveredBy: point["deliveredBy"].string)
+                    let poi = Poi(identificator: point["id"].intValue, latitude: point["latitude"].string, longitude: point["longitude"].string, status: point["status"].string, requestTimestamp: point["requestTimestamp"].string, deliveryTimestamp: point["deliveryTimestamp"].string, address: point["address"].string, deliveredBy: point["deliveredBy"].string)
                     points.append(poi)
                 }
                 
@@ -45,7 +45,7 @@ final class MCSService {
     func modifyPoi(poi: Poi, completion: @escaping (_ success: Bool)->Void) {
         
         let params : Parameters = [
-            "Id": poi.id ?? "",
+            "Id": poi.identificator ?? "",
             "Latitude": poi.latitude ?? "",
             "Longitude": poi.longitude ?? "",
             "Status": poi.status ?? "",
@@ -70,7 +70,7 @@ final class MCSService {
     func insertPoi(poi: Poi, completion: @escaping (_ success: Bool)->Void) {
         
         let params : Parameters = [
-            "Id": poi.id ?? "",
+            "Id": poi.identificator ?? "",
             "Latitude": poi.latitude ?? "",
             "Longitude": poi.longitude ?? "",
             "Status": poi.status ?? "",
