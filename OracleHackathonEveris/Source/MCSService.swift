@@ -55,7 +55,7 @@ final class MCSService {
             "DeliveredBy": poi.deliveredBy ?? ""
         ]
         
-        Alamofire.request("", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request("https://mcs-gse00010161.mobileenv.us2.oraclecloud.com:443/mobile/custom/apiDefinitivaEveris/point", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
             
             if let _ = response.result.error {
                 completion(false)
@@ -80,7 +80,7 @@ final class MCSService {
             "DeliveredBy": poi.deliveredBy ?? ""
         ]
         
-        Alamofire.request("", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request("https://mcs-gse00010161.mobileenv.us2.oraclecloud.com:443/mobile/custom/apiDefinitivaEveris/point", method: .put, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { response in
             
             if let _ = response.result.error {
                 completion(false)
