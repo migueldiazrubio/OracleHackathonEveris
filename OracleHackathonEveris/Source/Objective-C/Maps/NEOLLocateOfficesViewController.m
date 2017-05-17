@@ -90,6 +90,7 @@
 
 - (void)initializeMapViewCenteringInCoordinate:(CLLocationCoordinate2D)coordinate {
     [self.mapView setCenterCoordinate:coordinate zoomLevel:kInitZoomLevel animated:YES];
+    [self.mapView setCenterCoordinate:kMadridCenter zoomLevel:10 animated:YES];
     self.mapView.showsUserLocation = YES;
 }
 
@@ -194,13 +195,13 @@
             self.selectedPoi = office;
             [locateOfficesViewController animateToShowViewOfficeInfo];
             
-            MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
-            point.coordinate = CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue]);
+//            MKPointAnnotation *point=[[MKPointAnnotation alloc]init];
+//            point.coordinate = CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue]);
              //[self animateAnnotation:point];
             
 //            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake([[(Poi *)office latitude] doubleValue], [[(Poi *)office longitude] doubleValue])];
             
-            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake(33,33)];
+//            [(NEOLAnnotationOfficeView *) view setCoordinate:CLLocationCoordinate2DMake(33,33)];
         }
     }
 }
