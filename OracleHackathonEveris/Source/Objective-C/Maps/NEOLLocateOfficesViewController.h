@@ -20,10 +20,10 @@
 #define kSearchZoomLevel 13
 #define kMinimumSearchLength 3
 
-@class NEOLOffice;
+@class Poi;
 
 @protocol NEOLLocateOfficesViewControllerDetailOfficeViewProtocol <NSObject>
-- (void)setViewOfficeInfoWithOffice:(NEOLOffice *)office;
+- (void)setViewOfficeInfoWithOffice:(Poi *)office;
 - (void)animateToShowViewOfficeInfo;
 - (void)animateToHideViewOfficeInfo;
 - (void)showMapsApplicationsChoice;

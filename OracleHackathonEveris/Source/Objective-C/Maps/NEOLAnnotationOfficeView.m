@@ -7,9 +7,10 @@
 //
 
 #import "NEOLAnnotationOfficeView.h"
+#import "OracleHackathonEveris-swift.h"
 
-#define kPOITypeOffice  @"OFICINA"
-#define kPOITypeGarage  @"PDS"
+#define kPOITypeOffice  @"0"
+#define kPOITypeGarage  @"1"
 
 @implementation NEOLAnnotationOfficeView
 
@@ -19,9 +20,9 @@
 - (void)setAnnotation:(id<MKAnnotation>)annotation {
     _annotation = annotation;
     NEOLAnnotationOfficeModel *annotationOffice = (NEOLAnnotationOfficeModel *)annotation;
-    if ([annotationOffice.office.type isEqualToString:kPOITypeOffice]) {
+    if ([annotationOffice.office.status isEqualToString:kPOITypeOffice]) {
         self.image =[UIImage imageNamed:@"offices_poid_office"];
-    } else if ([annotationOffice.office.type isEqualToString:kPOITypeGarage]) {
+    } else if ([annotationOffice.office.status isEqualToString:kPOITypeGarage]) {
         self.image = [UIImage imageNamed:@"offices_poid_garage"];
     }else{
         self.image = [UIImage imageNamed:@"offices_img_point"];
@@ -31,9 +32,9 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     NEOLAnnotationOfficeModel *annotationOffice = (NEOLAnnotationOfficeModel *)self.annotation;
-    if ([annotationOffice.office.type isEqualToString:kPOITypeOffice]) {
+    if ([annotationOffice.office.status isEqualToString:kPOITypeOffice]) {
         self.image = selected ? [UIImage imageNamed:@"offices_poid_office_on"] : [UIImage imageNamed:@"offices_poid_office"];
-    } else if ([annotationOffice.office.type isEqualToString:kPOITypeGarage]) {
+    } else if ([annotationOffice.office.status isEqualToString:kPOITypeGarage]) {
         self.image = selected ? [UIImage imageNamed:@"offices_poid_garage_on"] : [UIImage imageNamed:@"offices_poid_garage"];
     }else{
         self.image = selected ? [UIImage imageNamed:@"offices_img_point"] : [UIImage imageNamed:@"offices_img_point"];

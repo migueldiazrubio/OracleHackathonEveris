@@ -46,7 +46,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph0-9i-KwJ"/>
-                                    <segue destination="5W8-By-3NZ" kind="show" identifier="segueToTable" id="DDS-bp-T3h"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microsoft-cloud-based-hackathon-yan-" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-dZ-30f">
@@ -89,6 +88,7 @@
                         <outlet property="buttonLogin" destination="CH3-Eu-iNe" id="Cuw-ma-EvX"/>
                         <outlet property="passTextfield" destination="2Gb-b2-ALD" id="4Bx-XL-hoJ"/>
                         <outlet property="userTextField" destination="Rlp-3g-TgZ" id="ByZ-V4-QvO"/>
+                        <segue destination="5W8-By-3NZ" kind="show" identifier="showSegueTable" id="ON2-Yd-vrt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -287,7 +287,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-Wl-tHW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYO-Wl-tHW">
                                 <rect key="frame" x="0.0" y="20" width="375" height="548"/>
                                 <connections>
                                     <outlet property="delegate" destination="L3x-W9-uqv" id="IkW-wM-YOq"/>
@@ -384,14 +384,14 @@
                         <constraints>
                             <constraint firstItem="Jjb-eN-fb9" firstAttribute="leading" secondItem="SIF-hR-yDb" secondAttribute="leading" id="AkJ-I2-hp2"/>
                             <constraint firstAttribute="trailing" secondItem="EYO-Wl-tHW" secondAttribute="trailing" id="HqL-xR-NLp"/>
-                            <constraint firstItem="EYO-Wl-tHW" firstAttribute="top" secondItem="mNx-8k-xKn" secondAttribute="bottom" id="KGY-sn-3Dy"/>
+                            <constraint firstItem="1rZ-YV-YlJ" firstAttribute="top" secondItem="EYO-Wl-tHW" secondAttribute="bottom" constant="35" id="KWU-L2-EE3"/>
+                            <constraint firstItem="EYO-Wl-tHW" firstAttribute="top" secondItem="mNx-8k-xKn" secondAttribute="bottom" constant="20" id="hly-Hl-tvE"/>
                             <constraint firstAttribute="trailing" secondItem="Jjb-eN-fb9" secondAttribute="trailing" id="iCo-6D-Hl8"/>
                             <constraint firstItem="Jjb-eN-fb9" firstAttribute="top" secondItem="dR5-jS-aTF" secondAttribute="bottom" constant="20" id="ivy-G5-GdJ"/>
                             <constraint firstAttribute="width" secondItem="EYO-Wl-tHW" secondAttribute="width" id="kA3-v8-Vpc"/>
                             <constraint firstItem="EYO-Wl-tHW" firstAttribute="leading" secondItem="SIF-hR-yDb" secondAttribute="leading" id="ktO-fx-Ni9"/>
                             <constraint firstItem="Jjb-eN-fb9" firstAttribute="top" secondItem="1rZ-YV-YlJ" secondAttribute="bottom" constant="-84" id="svf-U6-N8f"/>
                             <constraint firstAttribute="trailing" secondItem="dR5-jS-aTF" secondAttribute="trailing" constant="20" id="xEr-Ai-IPh"/>
-                            <constraint firstItem="1rZ-YV-YlJ" firstAttribute="top" secondItem="EYO-Wl-tHW" secondAttribute="bottom" constant="35" id="xYl-Wm-cy1"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -412,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCd-gB-WFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="136"/>
+            <point key="canvasLocation" x="2640.8000000000002" y="135.38230884557723"/>
         </scene>
     </scenes>
     <resources>

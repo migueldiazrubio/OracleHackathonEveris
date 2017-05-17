@@ -11,8 +11,8 @@ import UIKit
 class TableSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     @IBOutlet weak var selectedButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var officeDirecctions : [NEOLOffice] = []
-    var officeList : [NEOLOffice] = []
+    var officeDirecctions : [Poi] = []
+    var officeList : [Poi] = []
     
     fileprivate var headerView : TableViewHeaderCustom!
     
@@ -24,7 +24,7 @@ class TableSelectViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName :"TableViewHeaderCustom", bundle: nil), forCellReuseIdentifier: "TableViewHeaderCustom")
     
-        officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [NEOLOffice]
+        //officeList = NEOLMockRequestManager.mockLocateOfficesRequest() as! [Poi]
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }
@@ -47,7 +47,7 @@ class TableSelectViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? CustomTableViewCell
         cell?.checkImage.isHidden = true
-        cell?.labelAddress.text = officeList[indexPath.row].name
+        cell?.labelAddress.text = officeList[indexPath.row].address
         return cell!
     }
     

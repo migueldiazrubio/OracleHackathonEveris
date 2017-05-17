@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import "NEOLOffice.h"
+@class Poi;
 
 @interface NEOLAnnotationOfficeModel : NSObject <MKAnnotation>
 
@@ -17,8 +18,8 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 
-@property (nonatomic, strong) NEOLOffice *office;
+@property (nonatomic, strong) Poi *office;
 
-- (id)initWithOffice:(NEOLOffice *)office;
+- (id)initWithOffice:(Poi *)office;
 
 @end

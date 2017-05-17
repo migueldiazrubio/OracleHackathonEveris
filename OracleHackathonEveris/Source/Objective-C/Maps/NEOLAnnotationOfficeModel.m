@@ -7,12 +7,13 @@
 //
 
 #import "NEOLAnnotationOfficeModel.h"
-
 #import <CoreLocation/CoreLocation.h>
+#import "Poi.h"
+
 
 @implementation NEOLAnnotationOfficeModel
 
-- (id)initWithOffice:(NEOLOffice *)office {
+- (id)initWithOffice:(Poi* )office {
     self = [super init];
     if (self) {
         self.office = office;
@@ -32,8 +33,8 @@
 
     self.coordinate = CLLocationCoordinate2DMake(numberLatitude.doubleValue,
                                                  numberLongitude.doubleValue);
-    self.title = self.office.name;
-    self.subtitle = [self.office.physicalAddress description];
+    self.title = self.office.address;
+    self.subtitle = [self.office.address description];
 }
 
 @end

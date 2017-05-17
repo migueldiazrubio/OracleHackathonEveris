@@ -42,4 +42,6 @@
 #import "GGeocodeResponse.h"
 #import "NEOLAnnotationOfficeModel.h"
 
+#import "Poi.h"
+
 #endif 
