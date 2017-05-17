@@ -61,6 +61,8 @@
     if (![CLLocationManager locationServicesEnabled]) {
         
         [self initializeMapViewCenteringInCoordinate:kMadridCenter];
+        
+        [self buttonCenterTouchUpInside:nil];
     }
     
     [self.buttonHowToArrive setExclusiveTouch:YES];
